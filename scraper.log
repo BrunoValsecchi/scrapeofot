@@ -1,0 +1,175 @@
+2025-05-10 14:14:12,650 - INFO - === INICIANDO SCRAPER DE LIGA ARGENTINA ===
+2025-05-10 14:14:12,651 - INFO - === INICIANDO PROCESO DE OBTENCIÓN DE DATOS ===
+2025-05-10 14:14:12,651 - INFO - Intentando obtener datos usando la API de FotMob...
+2025-05-10 14:14:12,651 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=112&tab=overview
+2025-05-10 14:14:14,546 - WARNING - Error en la petición: 401
+2025-05-10 14:14:14,547 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:14:18,120 - WARNING - Error en la petición: 401
+2025-05-10 14:14:18,120 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:14:26,124 - WARNING - Error en la petición: 401
+2025-05-10 14:14:26,124 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=130&tab=overview
+2025-05-10 14:14:29,399 - WARNING - Error en la petición: 401
+2025-05-10 14:14:29,400 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:14:33,905 - WARNING - Error en la petición: 401
+2025-05-10 14:14:33,906 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:14:41,991 - WARNING - Error en la petición: 401
+2025-05-10 14:14:41,995 - INFO - Probando endpoint: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:14:44,177 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:14:47,598 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:14:50,609 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:14:50,611 - ERROR - Todos los intentos de API fallaron
+2025-05-10 14:14:50,611 - INFO - API no disponible. Intentando con navegador automático...
+2025-05-10 14:14:50,612 - INFO - Iniciando navegador para obtener datos de la Liga Argentina...
+2025-05-10 14:14:50,612 - INFO - ====== WebDriver manager ======
+2025-05-10 14:14:50,949 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-10 14:14:51,092 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-10 14:14:51,196 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-10 14:14:52,191 - INFO - Intentando acceder a: https://www.fotmob.com/leagues/112/overview/liga-profesional
+2025-05-10 14:15:19,162 - ERROR - Error general extrayendo datos de FotMob: Message: 
+Stacktrace:
+#0 0x602b0516378a <unknown>
+#1 0x602b04c060a0 <unknown>
+#2 0x602b04c579b0 <unknown>
+#3 0x602b04c57ba1 <unknown>
+#4 0x602b04ca5ea4 <unknown>
+#5 0x602b04c7d3cd <unknown>
+#6 0x602b04ca32a0 <unknown>
+#7 0x602b04c7d173 <unknown>
+#8 0x602b04c49d4b <unknown>
+#9 0x602b04c4a9b1 <unknown>
+#10 0x602b0512893b <unknown>
+#11 0x602b0512c83a <unknown>
+#12 0x602b05110692 <unknown>
+#13 0x602b0512d3c4 <unknown>
+#14 0x602b050f54cf <unknown>
+#15 0x602b05151568 <unknown>
+#16 0x602b05151746 <unknown>
+#17 0x602b051625f6 <unknown>
+#18 0x78345749caa4 <unknown>
+#19 0x783457529c3c <unknown>
+
+2025-05-10 14:15:19,477 - INFO - Navegador cerrado correctamente
+2025-05-10 14:15:19,478 - INFO - Selenium falló. Intentando con APIs alternativas...
+2025-05-10 14:15:19,479 - INFO - Intentando obtener datos de APIs alternativas...
+2025-05-10 14:15:20,387 - INFO - Datos obtenidos exitosamente de API alternativa
+2025-05-10 14:15:22,353 - WARNING - Error en API alternativa: 403
+2025-05-10 14:15:22,354 - WARNING - No se pudieron obtener datos de APIs alternativas
+2025-05-10 14:15:22,355 - ERROR - TODOS LOS MÉTODOS FALLARON. No se pudieron obtener datos.
+2025-05-10 14:26:43,973 - INFO - Intentando obtener datos usando la API de FotMob...
+2025-05-10 14:26:43,973 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=112&tab=overview
+2025-05-10 14:26:47,410 - WARNING - Error en la petición: 401
+2025-05-10 14:26:47,410 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:26:52,790 - WARNING - Error en la petición: 401
+2025-05-10 14:26:52,790 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:26:59,648 - WARNING - Error en la petición: 401
+2025-05-10 14:26:59,648 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=112&tab=tables
+2025-05-10 14:27:02,668 - WARNING - Error en la petición: 401
+2025-05-10 14:27:02,668 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:27:07,892 - WARNING - Error en la petición: 401
+2025-05-10 14:27:07,893 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:27:14,879 - WARNING - Error en la petición: 401
+2025-05-10 14:27:14,879 - INFO - Probando endpoint: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:17,036 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:19,844 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:22,351 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:22,354 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=130&tab=overview
+2025-05-10 14:27:24,070 - WARNING - Error en la petición: 401
+2025-05-10 14:27:24,071 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:27:28,575 - WARNING - Error en la petición: 401
+2025-05-10 14:27:28,575 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:27:35,978 - WARNING - Error en la petición: 401
+2025-05-10 14:27:35,978 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=130&tab=tables
+2025-05-10 14:27:38,083 - WARNING - Error en la petición: 401
+2025-05-10 14:27:38,089 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:27:42,195 - WARNING - Error en la petición: 401
+2025-05-10 14:27:42,196 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:27:50,540 - WARNING - Error en la petición: 401
+2025-05-10 14:27:50,540 - INFO - Probando endpoint: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:51,732 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:54,460 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:56,648 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:27:56,651 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=62&tab=overview
+2025-05-10 14:27:59,220 - WARNING - Error en la petición: 401
+2025-05-10 14:27:59,220 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:28:03,700 - WARNING - Error en la petición: 401
+2025-05-10 14:28:03,701 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:28:12,123 - WARNING - Error en la petición: 401
+2025-05-10 14:28:12,124 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=62&tab=tables
+2025-05-10 14:28:13,735 - WARNING - Error en la petición: 401
+2025-05-10 14:28:13,735 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:28:19,199 - WARNING - Error en la petición: 401
+2025-05-10 14:28:19,199 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:28:26,538 - WARNING - Error en la petición: 401
+2025-05-10 14:28:26,538 - INFO - Probando endpoint: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:28:29,019 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:28:31,747 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:28:32,967 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:28:32,973 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=252&tab=overview
+2025-05-10 14:28:34,970 - WARNING - Error en la petición: 401
+2025-05-10 14:28:34,971 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:28:39,747 - WARNING - Error en la petición: 401
+2025-05-10 14:28:39,747 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:28:46,606 - WARNING - Error en la petición: 401
+2025-05-10 14:28:46,607 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=252&tab=tables
+2025-05-10 14:28:49,621 - WARNING - Error en la petición: 401
+2025-05-10 14:28:49,622 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:28:53,395 - WARNING - Error en la petición: 401
+2025-05-10 14:28:53,395 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:29:00,227 - WARNING - Error en la petición: 401
+2025-05-10 14:29:00,227 - INFO - Probando endpoint: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:02,122 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:04,379 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:06,025 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:06,036 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=10006&tab=overview
+2025-05-10 14:29:09,034 - WARNING - Error en la petición: 401
+2025-05-10 14:29:09,034 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:29:14,147 - WARNING - Error en la petición: 401
+2025-05-10 14:29:14,148 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:29:21,939 - WARNING - Error en la petición: 401
+2025-05-10 14:29:21,941 - INFO - Probando endpoint: https://www.fotmob.com/api/leagues?id=10006&tab=tables
+2025-05-10 14:29:25,518 - WARNING - Error en la petición: 401
+2025-05-10 14:29:25,518 - INFO - Reintentando en 2 segundos...
+2025-05-10 14:29:30,602 - WARNING - Error en la petición: 401
+2025-05-10 14:29:30,603 - INFO - Reintentando en 5 segundos...
+2025-05-10 14:29:37,899 - WARNING - Error en la petición: 401
+2025-05-10 14:29:37,900 - INFO - Probando endpoint: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:39,976 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:42,551 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:45,599 - INFO - Acceso exitoso a la API: https://www.fotmob.com/api/allLeagues
+2025-05-10 14:29:45,601 - ERROR - Todos los intentos de API fallaron
+2025-05-10 14:29:45,602 - INFO - Iniciando navegador para obtener datos de la Liga Argentina...
+2025-05-10 14:29:45,602 - INFO - ====== WebDriver manager ======
+2025-05-10 14:29:45,963 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-10 14:29:46,077 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-10 14:29:46,186 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-10 14:29:47,339 - INFO - Intentando acceder a: https://www.afa.com.ar/es/torneos/primera-division
+2025-05-10 14:29:53,763 - INFO - Extrayendo datos desde AFA...
+2025-05-10 14:30:09,274 - ERROR - Error general extrayendo datos de AFA: Message: 
+Stacktrace:
+#0 0x56cbe713d78a <unknown>
+#1 0x56cbe6be00a0 <unknown>
+#2 0x56cbe6c319b0 <unknown>
+#3 0x56cbe6c31ba1 <unknown>
+#4 0x56cbe6c7fea4 <unknown>
+#5 0x56cbe6c573cd <unknown>
+#6 0x56cbe6c7d2a0 <unknown>
+#7 0x56cbe6c57173 <unknown>
+#8 0x56cbe6c23d4b <unknown>
+#9 0x56cbe6c249b1 <unknown>
+#10 0x56cbe710293b <unknown>
+#11 0x56cbe710683a <unknown>
+#12 0x56cbe70ea692 <unknown>
+#13 0x56cbe71073c4 <unknown>
+#14 0x56cbe70cf4cf <unknown>
+#15 0x56cbe712b568 <unknown>
+#16 0x56cbe712b746 <unknown>
+#17 0x56cbe713c5f6 <unknown>
+#18 0x7e920949caa4 <unknown>
+#19 0x7e9209529c3c <unknown>
+
+2025-05-10 14:30:09,275 - INFO - Intentando acceder a: https://www.ole.com.ar/futbol-primera/tabla-de-posiciones/
+2025-05-10 14:30:24,444 - INFO - Extrayendo datos desde Olé...
+2025-05-10 14:30:35,702 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/e3ab96577c38c16b7360fc3b70f1bd59
+2025-05-10 14:30:35,703 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d04251fb410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e3ab96577c38c16b7360fc3b70f1bd59
+2025-05-10 14:30:35,704 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d04251fa990>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e3ab96577c38c16b7360fc3b70f1bd59
+2025-05-10 14:30:35,705 - INFO - Navegador cerrado correctamente

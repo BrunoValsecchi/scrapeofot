@@ -1,0 +1,35 @@
+Iniciando scraping: 2025-05-11 23:26:03
+Total de jugadores a procesar: 32
+
+✅ Diego Rodriguez procesado correctamente
+✅ Gonzalo Siri Payer procesado correctamente
+✅ Agustin Mangiaut procesado correctamente
+✅ Leandro Lozano procesado correctamente
+✅ Kevin Coronel procesado correctamente
+✅ Erik Fernando Godoy procesado correctamente
+✅ Luciano Sanchez procesado correctamente
+✅ Francisco Alvarez procesado correctamente
+✅ Mateo Antoni procesado correctamente
+✅ Tobias Ramirez procesado correctamente
+✅ Sebastian Prieto procesado correctamente
+✅ Roman Vega procesado correctamente
+✅ Alan Rodriguez procesado correctamente
+✅ Nicolas Oroz procesado correctamente
+✅ Francisco Ilarregui procesado correctamente
+✅ Federico Fattori procesado correctamente
+✅ Alan Lescano procesado correctamente
+✅ Juan Cardozo procesado correctamente
+✅ Lucas Gomez procesado correctamente
+✅ Ariel Gamarra procesado correctamente
+✅ Diego Porcel procesado correctamente
+✅ Luis Fernando Alvarez procesado correctamente
+✅ Cristian Ferreira procesado correctamente
+✅ Emiliano Viveros procesado correctamente
+✅ Victor Ismael Sosa procesado correctamente
+✅ Manuel Brondo procesado correctamente
+✅ Ruben Bentancourt procesado correctamente
+✅ Maximiliano Romero procesado correctamente
+✅ Santiago Rodriguez procesado correctamente
+✅ Joaquin Ardaiz procesado correctamente
+✅ Tomas Molina procesado correctamente
+✅ Jose Herrera procesado correctamente
