@@ -1,0 +1,13 @@
+{
+  "postgresql.connections": [
+    {
+      "name": "PruebasScoutGine DB",
+      "host": "localhost",
+      "database": "pruebasscoutgine_db",
+      "user": "bruno-valsecchi",
+      "password": "brunovalse",
+      "port": 5432
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}   

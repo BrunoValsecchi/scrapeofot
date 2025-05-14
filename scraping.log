@@ -1,0 +1,129 @@
+2025-05-13 18:32:55,508 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 18:32:55,508 - INFO - ====== WebDriver manager ======
+2025-05-13 18:32:55,986 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:32:56,043 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:32:56,084 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 18:33:07,706 - ERROR - Error al insertar equipo: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, liga, fecha_actuali...
+                                ^
+
+2025-05-13 18:33:07,706 - ERROR - ❌ Error en el proceso: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, liga, fecha_actuali...
+                                ^
+Traceback (most recent call last):
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 123, in scrap_plantel_argentinos
+    equipo_id = insertar_equipo(cursor)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 49, in insertar_equipo
+    cursor.execute("""
+psycopg2.errors.UndefinedTable: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, liga, fecha_actuali...
+                                ^
+
+2025-05-13 18:47:45,927 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 18:47:45,927 - INFO - ====== WebDriver manager ======
+2025-05-13 18:47:46,082 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:47:46,115 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:47:46,150 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 18:47:54,471 - ERROR - Error al insertar equipo: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+
+2025-05-13 18:47:54,472 - ERROR - ❌ Error en el proceso: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+Traceback (most recent call last):
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 121, in scrap_plantel_argentinos
+    equipo_id = insertar_equipo(cursor)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 49, in insertar_equipo
+    cursor.execute("""
+psycopg2.errors.UndefinedTable: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+
+2025-05-13 18:54:13,999 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 18:54:13,999 - INFO - ====== WebDriver manager ======
+2025-05-13 18:54:14,146 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:54:14,176 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:54:14,207 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 18:54:22,135 - ERROR - Error al insertar equipo: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+
+2025-05-13 18:54:22,136 - ERROR - ❌ Error en el proceso: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+Traceback (most recent call last):
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 121, in scrap_plantel_argentinos
+    equipo_id = insertar_equipo(cursor)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 49, in insertar_equipo
+    cursor.execute("""
+psycopg2.errors.UndefinedTable: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+
+2025-05-13 18:57:30,901 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 18:57:30,902 - INFO - ====== WebDriver manager ======
+2025-05-13 18:57:31,126 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:57:31,154 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 18:57:32,284 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 18:57:41,237 - ERROR - Error de conexión a PostgreSQL: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "pruebasscoutgine_dbname" does not exist
+
+2025-05-13 18:57:41,238 - ERROR - ❌ Error en el proceso: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "pruebasscoutgine_dbname" does not exist
+Traceback (most recent call last):
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 117, in scrap_plantel_argentinos
+    conn = conectar_db()
+           ^^^^^^^^^^^^^
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 33, in conectar_db
+    conn = psycopg2.connect(**DB_CONFIG)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/venv/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "pruebasscoutgine_dbname" does not exist
+
+2025-05-13 19:04:35,499 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 19:04:35,500 - INFO - ====== WebDriver manager ======
+2025-05-13 19:04:35,855 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 19:04:35,908 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 19:04:35,954 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 19:04:45,647 - ERROR - Error al insertar equipo: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+
+2025-05-13 19:04:45,648 - ERROR - ❌ Error en el proceso: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+Traceback (most recent call last):
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 121, in scrap_plantel_argentinos
+    equipo_id = insertar_equipo(cursor)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/argentinos/argentinos.py", line 49, in insertar_equipo
+    cursor.execute("""
+psycopg2.errors.UndefinedTable: relation "equipos" does not exist
+LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
+                                ^
+
+2025-05-13 19:28:14,068 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 19:28:14,069 - INFO - ====== WebDriver manager ======
+2025-05-13 19:28:14,236 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 19:28:14,286 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 19:28:14,331 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 19:28:23,131 - INFO - ID del equipo obtenido: 1
+2025-05-13 19:28:32,118 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 18.05 segundos
+2025-05-13 20:27:51,755 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 20:27:51,756 - INFO - ====== WebDriver manager ======
+2025-05-13 20:27:51,934 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 20:27:52,007 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 20:27:52,041 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 20:28:01,676 - INFO - ID del equipo obtenido: 1
+2025-05-13 20:28:07,945 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 16.19 segundos
+2025-05-13 21:00:43,372 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-13 21:00:43,373 - INFO - ====== WebDriver manager ======
+2025-05-13 21:00:43,814 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 21:00:43,891 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-13 21:00:43,948 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-13 21:00:56,741 - INFO - ID del equipo obtenido: 1
+2025-05-13 21:01:03,074 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 19.70 segundos
