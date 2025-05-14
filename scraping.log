@@ -127,3 +127,524 @@ LINE 2:             INSERT INTO equipos (nombre, nombre_corto, liga)
 2025-05-13 21:00:43,948 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
 2025-05-13 21:00:56,741 - INFO - ID del equipo obtenido: 1
 2025-05-13 21:01:03,074 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 19.70 segundos
+2025-05-14 03:07:26,809 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 03:07:26,810 - INFO - ====== WebDriver manager ======
+2025-05-14 03:07:27,028 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:07:27,278 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:07:27,332 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:07:27,516 - INFO - WebDriver version 136.0.7103.92 selected
+2025-05-14 03:07:27,526 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/linux64/chromedriver-linux64.zip
+2025-05-14 03:07:27,526 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/linux64/chromedriver-linux64.zip
+2025-05-14 03:07:27,602 - INFO - Driver downloading response is 200
+2025-05-14 03:07:27,924 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:07:28,213 - INFO - Driver has been saved in cache [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92]
+2025-05-14 03:07:38,067 - ERROR - ❌ Error en el proceso: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=136.0.7103.92)
+Stacktrace:
+#0 0x55fb2f0fc78a <unknown>
+#1 0x55fb2eb9f0a0 <unknown>
+#2 0x55fb2eb86ea0 <unknown>
+#3 0x55fb2eb86ba2 <unknown>
+#4 0x55fb2eb849ef <unknown>
+#5 0x55fb2eb8531f <unknown>
+#6 0x55fb2eb93f83 <unknown>
+#7 0x55fb2ebad5ee <unknown>
+#8 0x55fb2ebb3e1b <unknown>
+#9 0x55fb2eb85a30 <unknown>
+#10 0x55fb2ebacdf5 <unknown>
+#11 0x55fb2ec3c5ba <unknown>
+#12 0x55fb2ec16173 <unknown>
+#13 0x55fb2ebe2d4b <unknown>
+#14 0x55fb2ebe39b1 <unknown>
+#15 0x55fb2f0c193b <unknown>
+#16 0x55fb2f0c583a <unknown>
+#17 0x55fb2f0a9692 <unknown>
+#18 0x55fb2f0c63c4 <unknown>
+#19 0x55fb2f08e4cf <unknown>
+#20 0x55fb2f0ea568 <unknown>
+#21 0x55fb2f0ea746 <unknown>
+#22 0x55fb2f0fb5f6 <unknown>
+#23 0x76c1cd29caa4 <unknown>
+#24 0x76c1cd329c3c <unknown>
+Traceback (most recent call last):
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/src/scrapers/liga_profesional/independiente/independiente.py", line 113, in scrap_plantel_independiente
+    driver.get("https://www.fotmob.com/teams/10078/squad/independiente")
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 473, in get
+    self.execute(Command.GET, {"url": url})
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 448, in execute
+    self.error_handler.check_response(response)
+  File "/home/bruno-valsecchi/Documentos/Programacion/Pruebas scoutgine/venv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=136.0.7103.92)
+Stacktrace:
+#0 0x55fb2f0fc78a <unknown>
+#1 0x55fb2eb9f0a0 <unknown>
+#2 0x55fb2eb86ea0 <unknown>
+#3 0x55fb2eb86ba2 <unknown>
+#4 0x55fb2eb849ef <unknown>
+#5 0x55fb2eb8531f <unknown>
+#6 0x55fb2eb93f83 <unknown>
+#7 0x55fb2ebad5ee <unknown>
+#8 0x55fb2ebb3e1b <unknown>
+#9 0x55fb2eb85a30 <unknown>
+#10 0x55fb2ebacdf5 <unknown>
+#11 0x55fb2ec3c5ba <unknown>
+#12 0x55fb2ec16173 <unknown>
+#13 0x55fb2ebe2d4b <unknown>
+#14 0x55fb2ebe39b1 <unknown>
+#15 0x55fb2f0c193b <unknown>
+#16 0x55fb2f0c583a <unknown>
+#17 0x55fb2f0a9692 <unknown>
+#18 0x55fb2f0c63c4 <unknown>
+#19 0x55fb2f08e4cf <unknown>
+#20 0x55fb2f0ea568 <unknown>
+#21 0x55fb2f0ea746 <unknown>
+#22 0x55fb2f0fb5f6 <unknown>
+#23 0x76c1cd29caa4 <unknown>
+#24 0x76c1cd329c3c <unknown>
+
+2025-05-14 03:09:19,245 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 03:09:19,245 - INFO - ====== WebDriver manager ======
+2025-05-14 03:09:19,409 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:09:19,448 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:09:19,486 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 03:09:27,882 - INFO - ID del equipo obtenido: 14
+2025-05-14 03:09:32,060 - INFO - ✅ Proceso completado. 35/36 jugadores procesados en 12.82 segundos
+2025-05-14 03:12:22,701 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 03:12:22,702 - INFO - ====== WebDriver manager ======
+2025-05-14 03:12:22,848 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:12:22,879 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:12:22,911 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 03:12:31,075 - INFO - ID del equipo obtenido: 14
+2025-05-14 03:12:35,464 - INFO - ✅ Proceso completado. 35/36 jugadores procesados en 12.76 segundos
+2025-05-14 03:33:33,461 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 03:33:33,462 - INFO - ====== WebDriver manager ======
+2025-05-14 03:33:33,642 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:33:33,799 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:33:33,858 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 03:33:46,233 - INFO - ID del equipo obtenido: 14
+2025-05-14 03:33:46,290 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 12.83 segundos
+2025-05-14 03:44:00,782 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 03:44:00,782 - INFO - ====== WebDriver manager ======
+2025-05-14 03:44:01,162 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:44:01,204 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 03:44:01,268 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 03:44:10,592 - INFO - ID del equipo obtenido: 14
+2025-05-14 03:44:19,538 - INFO - ✅ Proceso completado. 35/36 jugadores procesados en 18.76 segundos
+2025-05-14 05:55:35,621 - INFO - Iniciando scraping de plantel de huracan
+2025-05-14 05:55:35,621 - INFO - ====== WebDriver manager ======
+2025-05-14 05:55:35,788 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:55:35,840 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:55:35,867 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 05:55:46,352 - INFO - ID del equipo obtenido: 18
+2025-05-14 05:55:46,453 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.83 segundos
+2025-05-14 05:55:47,053 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 05:55:47,054 - INFO - ====== WebDriver manager ======
+2025-05-14 05:55:47,207 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:55:47,248 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:55:47,282 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 05:55:57,171 - INFO - ID del equipo obtenido: 14
+2025-05-14 05:56:02,272 - INFO - ✅ Proceso completado. 35/36 jugadores procesados en 15.22 segundos
+2025-05-14 05:56:02,746 - INFO - Iniciando scraping de plantel de defensa
+2025-05-14 05:56:02,746 - INFO - ====== WebDriver manager ======
+2025-05-14 05:56:02,883 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:56:02,913 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:56:02,942 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 05:56:13,927 - INFO - ID del equipo obtenido: 20
+2025-05-14 05:56:14,108 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 11.36 segundos
+2025-05-14 05:56:14,848 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-14 05:56:14,849 - INFO - ====== WebDriver manager ======
+2025-05-14 05:56:15,009 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:56:15,040 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 05:56:15,071 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 05:56:26,002 - INFO - ID del equipo obtenido: 1
+2025-05-14 05:56:32,348 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 17.50 segundos
+2025-05-14 06:02:21,192 - INFO - Iniciando scraping de plantel de barracas
+2025-05-14 06:02:21,192 - INFO - ====== WebDriver manager ======
+2025-05-14 06:02:21,348 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:21,378 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:21,402 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:02:31,735 - INFO - ID del equipo obtenido: 24
+2025-05-14 06:02:31,890 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.70 segundos
+2025-05-14 06:02:32,310 - INFO - Iniciando scraping de plantel de lanus
+2025-05-14 06:02:32,311 - INFO - ====== WebDriver manager ======
+2025-05-14 06:02:32,455 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:32,487 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:32,536 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:02:42,777 - INFO - ID del equipo obtenido: 25
+2025-05-14 06:02:42,956 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.65 segundos
+2025-05-14 06:02:43,462 - INFO - Iniciando scraping de plantel de union
+2025-05-14 06:02:43,462 - INFO - ====== WebDriver manager ======
+2025-05-14 06:02:43,633 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:43,661 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:43,691 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:02:53,797 - INFO - ID del equipo obtenido: 26
+2025-05-14 06:02:53,948 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.49 segundos
+2025-05-14 06:02:54,365 - INFO - Iniciando scraping de plantel de racing
+2025-05-14 06:02:54,365 - INFO - ====== WebDriver manager ======
+2025-05-14 06:02:54,513 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:54,543 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:02:54,570 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:03:04,884 - INFO - ID del equipo obtenido: 27
+2025-05-14 06:03:05,027 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.66 segundos
+2025-05-14 06:03:05,437 - INFO - Iniciando scraping de plantel de newells
+2025-05-14 06:03:05,437 - INFO - ====== WebDriver manager ======
+2025-05-14 06:03:05,590 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:05,616 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:05,642 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:03:15,721 - INFO - ID del equipo obtenido: 28
+2025-05-14 06:03:15,864 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.43 segundos
+2025-05-14 06:03:16,278 - INFO - Iniciando scraping de plantel de river
+2025-05-14 06:03:16,278 - INFO - ====== WebDriver manager ======
+2025-05-14 06:03:16,427 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:16,459 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:16,483 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:03:26,537 - INFO - ID del equipo obtenido: 29
+2025-05-14 06:03:26,704 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.43 segundos
+2025-05-14 06:03:27,190 - INFO - Iniciando scraping de plantel de platense
+2025-05-14 06:03:27,190 - INFO - ====== WebDriver manager ======
+2025-05-14 06:03:27,382 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:27,411 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:27,462 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:03:37,355 - INFO - ID del equipo obtenido: 30
+2025-05-14 06:03:37,537 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.35 segundos
+2025-05-14 06:03:38,055 - INFO - Iniciando scraping de plantel de aldosivi
+2025-05-14 06:03:38,055 - INFO - ====== WebDriver manager ======
+2025-05-14 06:03:38,193 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:38,221 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:38,246 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:03:48,111 - INFO - ID del equipo obtenido: 31
+2025-05-14 06:03:48,285 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.23 segundos
+2025-05-14 06:03:48,708 - INFO - Iniciando scraping de plantel de gimnasia
+2025-05-14 06:03:48,708 - INFO - ====== WebDriver manager ======
+2025-05-14 06:03:48,850 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:48,877 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:48,905 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:03:58,981 - INFO - ID del equipo obtenido: 32
+2025-05-14 06:03:59,155 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.45 segundos
+2025-05-14 06:03:59,649 - INFO - Iniciando scraping de plantel de velez
+2025-05-14 06:03:59,649 - INFO - ====== WebDriver manager ======
+2025-05-14 06:03:59,790 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:59,822 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:03:59,867 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:04:09,766 - INFO - ID del equipo obtenido: 33
+2025-05-14 06:04:09,836 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.19 segundos
+2025-05-14 06:04:10,295 - INFO - Iniciando scraping de plantel de sarmiento
+2025-05-14 06:04:10,296 - INFO - ====== WebDriver manager ======
+2025-05-14 06:04:10,476 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:10,511 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:10,536 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:04:20,946 - INFO - ID del equipo obtenido: 34
+2025-05-14 06:04:21,102 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.81 segundos
+2025-05-14 06:04:21,561 - INFO - Iniciando scraping de plantel de atltucuman
+2025-05-14 06:04:21,562 - INFO - ====== WebDriver manager ======
+2025-05-14 06:04:21,705 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:21,732 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:21,760 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:04:32,247 - INFO - ID del equipo obtenido: 35
+2025-05-14 06:04:32,395 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.83 segundos
+2025-05-14 06:04:32,892 - INFO - Iniciando scraping de plantel de talleres
+2025-05-14 06:04:32,892 - INFO - ====== WebDriver manager ======
+2025-05-14 06:04:33,031 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:33,059 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:33,090 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:04:43,165 - INFO - ID del equipo obtenido: 36
+2025-05-14 06:04:43,341 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.45 segundos
+2025-05-14 06:04:43,850 - INFO - Iniciando scraping de plantel de tigre
+2025-05-14 06:04:43,850 - INFO - ====== WebDriver manager ======
+2025-05-14 06:04:43,989 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:44,016 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:44,045 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:04:54,134 - INFO - ID del equipo obtenido: 37
+2025-05-14 06:04:54,302 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.45 segundos
+2025-05-14 06:04:54,899 - INFO - Iniciando scraping de plantel de centra
+2025-05-14 06:04:54,899 - INFO - ====== WebDriver manager ======
+2025-05-14 06:04:55,043 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:55,069 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:04:55,106 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:05:05,188 - INFO - ID del equipo obtenido: 38
+2025-05-14 06:05:05,345 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.45 segundos
+2025-05-14 06:05:05,811 - INFO - Iniciando scraping de plantel de sanlorenzo
+2025-05-14 06:05:05,811 - INFO - ====== WebDriver manager ======
+2025-05-14 06:05:05,949 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:05,979 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:06,011 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:05:16,532 - INFO - ID del equipo obtenido: 39
+2025-05-14 06:05:16,727 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.92 segundos
+2025-05-14 06:05:17,231 - INFO - Iniciando scraping de plantel de banfield
+2025-05-14 06:05:17,232 - INFO - ====== WebDriver manager ======
+2025-05-14 06:05:17,389 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:17,429 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:17,465 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:05:27,783 - INFO - ID del equipo obtenido: 40
+2025-05-14 06:05:27,938 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.71 segundos
+2025-05-14 06:05:28,442 - INFO - Iniciando scraping de plantel de boca
+2025-05-14 06:05:28,442 - INFO - ====== WebDriver manager ======
+2025-05-14 06:05:28,582 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:28,610 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:28,640 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:05:38,773 - INFO - ID del equipo obtenido: 41
+2025-05-14 06:05:38,945 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.50 segundos
+2025-05-14 06:05:39,529 - INFO - Iniciando scraping de plantel de independienteriv
+2025-05-14 06:05:39,529 - INFO - ====== WebDriver manager ======
+2025-05-14 06:05:39,674 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:39,705 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:39,732 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:05:49,672 - INFO - ID del equipo obtenido: 42
+2025-05-14 06:05:49,880 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.35 segundos
+2025-05-14 06:05:50,459 - INFO - Iniciando scraping de plantel de instituto
+2025-05-14 06:05:50,459 - INFO - ====== WebDriver manager ======
+2025-05-14 06:05:50,611 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:50,644 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:05:50,675 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:06:00,839 - INFO - ID del equipo obtenido: 43
+2025-05-14 06:06:01,000 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.54 segundos
+2025-05-14 06:06:01,509 - INFO - Iniciando scraping de plantel de sanmartin
+2025-05-14 06:06:01,509 - INFO - ====== WebDriver manager ======
+2025-05-14 06:06:01,650 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:01,680 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:01,716 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:06:11,473 - INFO - ID del equipo obtenido: 44
+2025-05-14 06:06:11,626 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.12 segundos
+2025-05-14 06:06:12,094 - INFO - Iniciando scraping de plantel de centralcor
+2025-05-14 06:06:12,095 - INFO - ====== WebDriver manager ======
+2025-05-14 06:06:12,239 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:12,268 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:12,292 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:06:22,575 - INFO - ID del equipo obtenido: 45
+2025-05-14 06:06:22,742 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.65 segundos
+2025-05-14 06:06:23,303 - INFO - Iniciando scraping de plantel de estudiantes
+2025-05-14 06:06:23,303 - INFO - ====== WebDriver manager ======
+2025-05-14 06:06:23,445 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:23,473 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:23,502 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:06:33,364 - INFO - ID del equipo obtenido: 46
+2025-05-14 06:06:33,513 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.21 segundos
+2025-05-14 06:06:33,925 - INFO - Iniciando scraping de plantel de riestra
+2025-05-14 06:06:33,926 - INFO - ====== WebDriver manager ======
+2025-05-14 06:06:34,068 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:34,095 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:34,131 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:06:44,181 - INFO - ID del equipo obtenido: 47
+2025-05-14 06:06:44,335 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 10.41 segundos
+2025-05-14 06:06:44,801 - INFO - Iniciando scraping de plantel de belgrano
+2025-05-14 06:06:44,801 - INFO - ====== WebDriver manager ======
+2025-05-14 06:06:44,940 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:44,969 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:06:44,999 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:06:52,628 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/0badbe9825edaea6806420c62219f456
+2025-05-14 06:06:52,631 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71b6184b2630>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0badbe9825edaea6806420c62219f456
+2025-05-14 06:06:52,633 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71b6184b2570>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0badbe9825edaea6806420c62219f456
+2025-05-14 06:12:32,609 - INFO - Iniciando scraping de plantel de huracan
+2025-05-14 06:12:32,609 - INFO - ====== WebDriver manager ======
+2025-05-14 06:12:32,746 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:12:32,814 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:12:32,851 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:12:43,428 - INFO - ID del equipo obtenido: 18
+2025-05-14 06:12:49,192 - INFO - ✅ Proceso completado. 34/35 jugadores procesados en 16.58 segundos
+2025-05-14 06:12:49,728 - INFO - Iniciando scraping de plantel de Independiente
+2025-05-14 06:12:49,728 - INFO - ====== WebDriver manager ======
+2025-05-14 06:12:49,874 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:12:49,908 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:12:49,944 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:12:58,191 - INFO - ID del equipo obtenido: 14
+2025-05-14 06:13:03,620 - INFO - ✅ Proceso completado. 35/36 jugadores procesados en 13.89 segundos
+2025-05-14 06:13:04,083 - INFO - Iniciando scraping de plantel de defensa
+2025-05-14 06:13:04,083 - INFO - ====== WebDriver manager ======
+2025-05-14 06:13:04,221 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:13:04,249 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:13:04,277 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:13:14,847 - INFO - ID del equipo obtenido: 20
+2025-05-14 06:13:20,927 - INFO - ✅ Proceso completado. 37/38 jugadores procesados en 16.84 segundos
+2025-05-14 06:13:21,394 - INFO - Iniciando scraping de plantel de Argentinos Juniors
+2025-05-14 06:13:21,394 - INFO - ====== WebDriver manager ======
+2025-05-14 06:13:21,547 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:13:21,584 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:13:21,617 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:13:29,833 - INFO - ID del equipo obtenido: 1
+2025-05-14 06:13:35,567 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 14.17 segundos
+2025-05-14 06:19:02,464 - INFO - Iniciando scraping de plantel de barracas
+2025-05-14 06:19:02,465 - INFO - ====== WebDriver manager ======
+2025-05-14 06:19:02,773 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:19:02,812 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:19:02,874 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:19:14,772 - INFO - ID del equipo obtenido: 24
+2025-05-14 06:19:20,459 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 17.99 segundos
+2025-05-14 06:19:21,233 - INFO - Iniciando scraping de plantel de lanus
+2025-05-14 06:19:21,233 - INFO - ====== WebDriver manager ======
+2025-05-14 06:19:21,525 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:19:21,565 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:19:21,602 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:19:33,782 - INFO - ID del equipo obtenido: 25
+2025-05-14 06:19:39,957 - INFO - ✅ Proceso completado. 38/39 jugadores procesados en 18.72 segundos
+2025-05-14 06:19:40,731 - INFO - Iniciando scraping de plantel de union
+2025-05-14 06:19:40,732 - INFO - ====== WebDriver manager ======
+2025-05-14 06:19:41,023 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:19:41,076 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:19:41,128 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:19:53,770 - INFO - ID del equipo obtenido: 26
+2025-05-14 06:19:59,673 - INFO - ✅ Proceso completado. 37/38 jugadores procesados en 18.94 segundos
+2025-05-14 06:20:00,590 - INFO - Iniciando scraping de plantel de racing
+2025-05-14 06:20:00,591 - INFO - ====== WebDriver manager ======
+2025-05-14 06:20:00,926 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:00,978 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:01,019 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:20:13,390 - INFO - ID del equipo obtenido: 27
+2025-05-14 06:20:19,629 - INFO - ✅ Proceso completado. 37/38 jugadores procesados en 19.04 segundos
+2025-05-14 06:20:20,492 - INFO - Iniciando scraping de plantel de newells
+2025-05-14 06:20:20,492 - INFO - ====== WebDriver manager ======
+2025-05-14 06:20:20,795 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:20,840 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:20,887 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:20:32,386 - INFO - ID del equipo obtenido: 28
+2025-05-14 06:20:38,900 - INFO - ✅ Proceso completado. 39/40 jugadores procesados en 18.41 segundos
+2025-05-14 06:20:39,679 - INFO - Iniciando scraping de plantel de river
+2025-05-14 06:20:39,679 - INFO - ====== WebDriver manager ======
+2025-05-14 06:20:39,980 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:40,030 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:40,065 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:20:52,794 - INFO - ID del equipo obtenido: 29
+2025-05-14 06:20:57,986 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 18.31 segundos
+2025-05-14 06:20:58,759 - INFO - Iniciando scraping de plantel de platense
+2025-05-14 06:20:58,759 - INFO - ====== WebDriver manager ======
+2025-05-14 06:20:59,051 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:59,089 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:20:59,123 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:21:11,292 - INFO - ID del equipo obtenido: 30
+2025-05-14 06:21:17,506 - INFO - ✅ Proceso completado. 36/37 jugadores procesados en 18.75 segundos
+2025-05-14 06:21:18,279 - INFO - Iniciando scraping de plantel de aldosivi
+2025-05-14 06:21:18,280 - INFO - ====== WebDriver manager ======
+2025-05-14 06:21:18,574 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:21:18,620 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:21:18,662 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:21:29,511 - INFO - ID del equipo obtenido: 31
+2025-05-14 06:21:29,690 - INFO - ✅ Proceso completado. 0/0 jugadores procesados en 11.41 segundos
+2025-05-14 06:21:30,680 - INFO - Iniciando scraping de plantel de gimnasia
+2025-05-14 06:21:30,680 - INFO - ====== WebDriver manager ======
+2025-05-14 06:21:31,014 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:21:31,067 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:21:31,133 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:21:43,200 - INFO - ID del equipo obtenido: 32
+2025-05-14 06:21:48,893 - INFO - ✅ Proceso completado. 34/35 jugadores procesados en 18.21 segundos
+2025-05-14 06:21:49,674 - INFO - Iniciando scraping de plantel de velez
+2025-05-14 06:21:49,675 - INFO - ====== WebDriver manager ======
+2025-05-14 06:21:49,976 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:21:50,038 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:21:50,085 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:22:02,150 - INFO - ID del equipo obtenido: 33
+2025-05-14 06:22:08,683 - INFO - ✅ Proceso completado. 40/41 jugadores procesados en 19.01 segundos
+2025-05-14 06:22:09,484 - INFO - Iniciando scraping de plantel de sarmiento
+2025-05-14 06:22:09,485 - INFO - ====== WebDriver manager ======
+2025-05-14 06:22:09,812 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:22:09,850 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:22:09,888 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:22:21,765 - INFO - ID del equipo obtenido: 34
+2025-05-14 06:22:27,759 - INFO - ✅ Proceso completado. 36/37 jugadores procesados en 18.27 segundos
+2025-05-14 06:22:28,535 - INFO - Iniciando scraping de plantel de atltucuman
+2025-05-14 06:22:28,536 - INFO - ====== WebDriver manager ======
+2025-05-14 06:22:28,837 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:22:28,899 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:22:28,945 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:22:38,863 - INFO - ID del equipo obtenido: 35
+2025-05-14 06:22:44,006 - INFO - ✅ Proceso completado. 30/31 jugadores procesados en 15.47 segundos
+2025-05-14 06:22:44,826 - INFO - Iniciando scraping de plantel de talleres
+2025-05-14 06:22:44,826 - INFO - ====== WebDriver manager ======
+2025-05-14 06:22:45,135 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:22:45,175 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:22:45,215 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:22:57,933 - INFO - ID del equipo obtenido: 36
+2025-05-14 06:23:04,629 - INFO - ✅ Proceso completado. 41/42 jugadores procesados en 19.80 segundos
+2025-05-14 06:23:05,435 - INFO - Iniciando scraping de plantel de tigre
+2025-05-14 06:23:05,436 - INFO - ====== WebDriver manager ======
+2025-05-14 06:23:05,744 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:23:05,793 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:23:05,847 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:23:18,400 - INFO - ID del equipo obtenido: 37
+2025-05-14 06:23:24,561 - INFO - ✅ Proceso completado. 37/38 jugadores procesados en 19.13 segundos
+2025-05-14 06:23:25,354 - INFO - Iniciando scraping de plantel de centra
+2025-05-14 06:23:25,354 - INFO - ====== WebDriver manager ======
+2025-05-14 06:23:25,665 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:23:25,716 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:23:25,758 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:23:37,678 - INFO - ID del equipo obtenido: 38
+2025-05-14 06:23:43,867 - INFO - ✅ Proceso completado. 38/39 jugadores procesados en 18.51 segundos
+2025-05-14 06:23:44,640 - INFO - Iniciando scraping de plantel de sanlorenzo
+2025-05-14 06:23:44,640 - INFO - ====== WebDriver manager ======
+2025-05-14 06:23:44,959 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:23:45,000 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:23:45,038 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:23:57,982 - INFO - ID del equipo obtenido: 39
+2025-05-14 06:24:04,359 - INFO - ✅ Proceso completado. 38/39 jugadores procesados en 19.72 segundos
+2025-05-14 06:24:05,195 - INFO - Iniciando scraping de plantel de banfield
+2025-05-14 06:24:05,196 - INFO - ====== WebDriver manager ======
+2025-05-14 06:24:05,505 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:24:05,924 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:24:05,971 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:24:18,487 - INFO - ID del equipo obtenido: 40
+2025-05-14 06:24:23,967 - INFO - ✅ Proceso completado. 34/35 jugadores procesados en 18.77 segundos
+2025-05-14 06:24:24,740 - INFO - Iniciando scraping de plantel de boca
+2025-05-14 06:24:24,740 - INFO - ====== WebDriver manager ======
+2025-05-14 06:24:25,030 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:24:25,075 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:24:25,113 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:24:36,756 - INFO - ID del equipo obtenido: 41
+2025-05-14 06:24:43,581 - INFO - ✅ Proceso completado. 42/43 jugadores procesados en 18.84 segundos
+2025-05-14 06:24:44,382 - INFO - Iniciando scraping de plantel de independienteriv
+2025-05-14 06:24:44,382 - INFO - ====== WebDriver manager ======
+2025-05-14 06:24:44,690 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:24:44,737 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:24:44,787 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:24:56,963 - INFO - ID del equipo obtenido: 42
+2025-05-14 06:25:02,670 - INFO - ✅ Proceso completado. 33/34 jugadores procesados en 18.29 segundos
+2025-05-14 06:25:03,463 - INFO - Iniciando scraping de plantel de instituto
+2025-05-14 06:25:03,463 - INFO - ====== WebDriver manager ======
+2025-05-14 06:25:03,757 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:03,810 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:03,865 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:25:15,871 - INFO - ID del equipo obtenido: 43
+2025-05-14 06:25:21,308 - INFO - ✅ Proceso completado. 32/33 jugadores procesados en 17.85 segundos
+2025-05-14 06:25:22,097 - INFO - Iniciando scraping de plantel de sanmartin
+2025-05-14 06:25:22,098 - INFO - ====== WebDriver manager ======
+2025-05-14 06:25:22,394 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:22,435 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:22,471 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:25:34,666 - INFO - ID del equipo obtenido: 44
+2025-05-14 06:25:40,852 - INFO - ✅ Proceso completado. 37/38 jugadores procesados en 18.75 segundos
+2025-05-14 06:25:41,644 - INFO - Iniciando scraping de plantel de centralcor
+2025-05-14 06:25:41,645 - INFO - ====== WebDriver manager ======
+2025-05-14 06:25:41,933 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:41,985 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:42,027 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:25:52,205 - INFO - ID del equipo obtenido: 45
+2025-05-14 06:25:58,678 - INFO - ✅ Proceso completado. 38/39 jugadores procesados en 17.03 segundos
+2025-05-14 06:25:59,566 - INFO - Iniciando scraping de plantel de estudiantes
+2025-05-14 06:25:59,566 - INFO - ====== WebDriver manager ======
+2025-05-14 06:25:59,882 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:59,931 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:25:59,980 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:26:12,027 - INFO - ID del equipo obtenido: 46
+2025-05-14 06:26:17,971 - INFO - ✅ Proceso completado. 34/35 jugadores procesados en 18.41 segundos
+2025-05-14 06:26:18,750 - INFO - Iniciando scraping de plantel de riestra
+2025-05-14 06:26:18,750 - INFO - ====== WebDriver manager ======
+2025-05-14 06:26:19,045 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:26:19,090 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:26:19,131 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:26:31,546 - INFO - ID del equipo obtenido: 47
+2025-05-14 06:26:37,801 - INFO - ✅ Proceso completado. 38/39 jugadores procesados en 19.05 segundos
+2025-05-14 06:26:38,600 - INFO - Iniciando scraping de plantel de belgrano
+2025-05-14 06:26:38,600 - INFO - ====== WebDriver manager ======
+2025-05-14 06:26:38,894 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:26:38,943 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:26:38,982 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:26:49,046 - INFO - ID del equipo obtenido: 78
+2025-05-14 06:26:55,342 - INFO - ✅ Proceso completado. 39/40 jugadores procesados en 16.74 segundos
+2025-05-14 06:26:56,300 - INFO - Iniciando scraping de plantel de godoy
+2025-05-14 06:26:56,301 - INFO - ====== WebDriver manager ======
+2025-05-14 06:26:56,626 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:26:56,675 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-14 06:26:56,735 - INFO - Driver [/home/bruno-valsecchi/.wdm/drivers/chromedriver/linux64/136.0.7103.92/chromedriver-linux64/chromedriver] found in cache
+2025-05-14 06:27:08,672 - INFO - ID del equipo obtenido: 79
+2025-05-14 06:27:14,946 - INFO - ✅ Proceso completado. 37/38 jugadores procesados en 18.65 segundos

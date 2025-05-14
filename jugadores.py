@@ -3,13 +3,13 @@ import json
 
 # Lista de jugadores con su nombre
 jugadores = [
-    "Diego Rodriguez", "Gonzalo Siri Payer", "Agustin Mangiaut", "Leandro Lozano",
-    "Kevin Coronel", "Erik Fernando Godoy", "Luciano Sanchez", "Francisco Alvarez",
-    "Mateo Antoni", "Tobias Ramirez", "Sebastian Prieto", "Roman Vega", "Alan Rodriguez",
-    "Nicolas Oroz", "Francisco Ilarregui", "Federico Fattori", "Alan Lescano", "Juan Cardozo",
-    "Lucas Gomez", "Ariel Gamarra", "Diego Porcel", "Luis Fernando Alvarez", "Cristian Ferreira",
-    "Emiliano Viveros", "Victor Ismael Sosa", "Manuel Brondo", "Ruben Bentancourt",
-    "Maximiliano Romero", "Santiago Rodriguez", "Joaquin Ardaiz", "Tomas Molina", "Jose Herrera"
+    "Rodrigo Rey", "Joaquin Blázquez", "Manuel Tasso", "Federico Vera", "Mauro Zurita",
+    "Santiago Salle", "Nicolas Freire", "Sebastian Valdez", "Franco Paredes", "Kevin Lomonaco",
+    "Fernando Da Rosa", "Jonathan De Irastorza", "Gonzalo Bordon", "Adrian Sporle", "Alvaro Angulo",
+    "Iván Marcone", "Pablo Galdames", "Rodrigo Fernandez", "Felipe Loyola", "David Martinez",
+    "Lautaro Millan", "Joel Medina", "Federico Mancuello", "Luciano Cabral", "Pocho Roman",
+    "Santiago Hidalgo", "Santiago Gabriel Montiel", "Braian Martinez", "Diego Tarzia",
+    "Enzo Taborda", "Kevin Medina", "Gabriel Avalos", "Matias Gimenez Rojas", "Ignacio Maestro Puch"
 ]
 
 def obtener_enlaces_jugador(jugadores):

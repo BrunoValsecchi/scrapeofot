@@ -12,11 +12,11 @@ SCRIPTS_DIR = BASE_DIR / "src" / "scrapers" / "liga_profesional"
 DATA_DIR = BASE_DIR / "data" / "raw"
 
 # ==========================
-# FUNCIÓN PARA BUSCAR EQUIPOS
+# FUNCIÓN PARA BUSCAR SCRIPTS
 # ==========================
 
 def find_team_scripts():
-    """Busca scripts en cada equipo dentro de liga_profesional"""
+    """Busca todos los archivos .py dentro de cada carpeta de equipo"""
     all_teams = []
 
     print(f"\n🔍 Buscando scripts en: {SCRIPTS_DIR}")
@@ -29,22 +29,17 @@ def find_team_scripts():
         if team_folder.is_dir():
             team_name = team_folder.name.lower()
 
-            expected_scripts = {
-                'plantel': team_folder / f"{team_name}.py",
-                'stats': team_folder / f"stats_{team_name}.py",
-                'jugadores': team_folder / "stat_jugarg.py"
-            }
+            # Buscar todos los .py (excepto __init__.py si existiera)
+            py_scripts = [f for f in team_folder.glob("*.py") if f.name != "__init__.py"]
 
-            existing_scripts = {k: v for k, v in expected_scripts.items() if v.exists()}
-
-            if existing_scripts:
+            if py_scripts:
                 all_teams.append({
                     'team': team_name,
                     'liga': 'liga_profesional',
-                    'scripts': existing_scripts
+                    'scripts': py_scripts
                 })
             else:
-                print(f"⚠️ No se encontraron scripts válidos en {team_name}/")
+                print(f"⚠️ No se encontraron scripts .py en {team_name}/")
 
     return all_teams
 
@@ -61,23 +56,19 @@ def run_scraping():
     total_teams = len(teams)
 
     if not teams:
-        print("\n❌ No se encontraron scripts válidos.")
-        print("📝 Asegurate que cada equipo tenga:")
-        print("  - equipo.py")
-        print("  - stats_equipo.py")
-        print("  - stat_jugarg.py")
+        print("\n❌ No se encontraron scripts .py válidos.")
         return
 
     for team in teams:
         print(f"\n🔵 Procesando equipo: {team['team'].upper()}")
 
-        # Crear carpeta de salida de datos
+        # Crear carpeta de salida
         team_data_dir = DATA_DIR / team['liga'] / team['team']
         os.makedirs(team_data_dir, exist_ok=True)
         print(f"📂 Los datos se guardarán en: {team_data_dir}")
 
-        for script_type, script_path in team['scripts'].items():
-            print(f"\n⚙️ Ejecutando script: {script_type} ({script_path.name})")
+        for script_path in team['scripts']:
+            print(f"\n⚙️ Ejecutando: {script_path.name}")
             try:
                 start_time = time.time()
                 subprocess.run(['python3', str(script_path)], check=True)
@@ -96,3 +87,4 @@ def run_scraping():
 
 if __name__ == "__main__":
     run_scraping()
+ 666666
