@@ -16,7 +16,7 @@ DATA_DIR = BASE_DIR / "data" / "raw"
 # ==========================
 
 def find_team_scripts():
-    """Busca todos los archivos .py dentro de cada carpeta de equipo"""
+    """Busca todos los archivos .py dentro de cada carpeta de equipo y los ordena"""
     all_teams = []
 
     print(f"\n🔍 Buscando scripts en: {SCRIPTS_DIR}")
@@ -25,13 +25,14 @@ def find_team_scripts():
         print(f"❌ No existe el directorio: {SCRIPTS_DIR}")
         return []
 
-    for team_folder in SCRIPTS_DIR.iterdir():
+    for team_folder in sorted(SCRIPTS_DIR.iterdir()):  # Ordenar carpetas de equipos
         if team_folder.is_dir():
             team_name = team_folder.name.lower()
 
-            # Buscar todos los .py (excepto __init__.py si existiera)
-            py_scripts = [f for f in team_folder.glob("*.py") if f.name != "__init__.py"]
-
+            # Buscar todos los .py (excepto __init__.py) y ordenarlos
+            py_scripts = sorted([f for f in team_folder.glob("*.py") 
+                               if f.name != "__init__.py"])
+            
             if py_scripts:
                 all_teams.append({
                     'team': team_name,
@@ -59,8 +60,8 @@ def run_scraping():
         print("\n❌ No se encontraron scripts .py válidos.")
         return
 
-    for team in teams:
-        print(f"\n🔵 Procesando equipo: {team['team'].upper()}")
+    for idx, team in enumerate(teams, 1):
+        print(f"\n🔵 [{idx}/{total_teams}] Procesando equipo: {team['team'].upper()}")
 
         # Crear carpeta de salida
         team_data_dir = DATA_DIR / team['liga'] / team['team']
@@ -74,8 +75,10 @@ def run_scraping():
                 subprocess.run(['python3', str(script_path)], check=True)
                 elapsed = time.time() - start_time
                 print(f"✅ {script_path.name} completado en {elapsed:.2f} segundos")
+            except subprocess.CalledProcessError as e:
+                print(f"❌ Error ejecutando {script_path.name}: Código {e.returncode}")
             except Exception as e:
-                print(f"❌ Error ejecutando {script_path.name}: {e}")
+                print(f"❌ Error inesperado ejecutando {script_path.name}: {str(e)}")
 
     print(f"\n{'='*50}")
     print(f"✅ SCRAPING COMPLETADO PARA {total_teams} EQUIPO(S)")
@@ -86,5 +89,4 @@ def run_scraping():
 # ==========================
 
 if __name__ == "__main__":
-    run_scraping()
- 666666
+    run_scraping() 

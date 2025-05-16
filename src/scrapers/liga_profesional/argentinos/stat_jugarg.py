@@ -23,7 +23,6 @@ DB_CONFIG = {
 
 # Listas de URLs (las mismas que proporcionaste)
 arquero_urls = [
-    "https://www.fotmob.com/players/49658/nicolas-diez",
     "https://www.fotmob.com/players/186986",
     "https://www.fotmob.com/players/1608394/gonzalo-siri-payer",
     "https://www.fotmob.com/players/1680187/agustin-mangiaut"
@@ -352,7 +351,7 @@ def main():
             # Insertar Argentinos Juniors si no existe
             cur.execute("""
             INSERT INTO equipos (nombre, nombre_corto, liga)
-            VALUES ('Argentinos Juniors', 'Argentinos', 'Liga Profesional')
+            VALUES ('Argentinos Juniors', 'Arg. Juniors', 'Liga Profesional')
             ON CONFLICT (nombre) DO NOTHING
             RETURNING equipo_id;
             """)

@@ -21,14 +21,18 @@ DB_CONFIG = {
     'port': os.getenv('DB_PORT', '5432')
 }
 
-# Listas de URLs de jugadores de Independiente
+# Listas de URLs para Aldosivi
 arquero_urls = [
-    'https://www.fotmob.com/players/443465/rodrigo-rey', 'https://www.fotmob.com/players/1054156/joaquin-blazquez', 'https://www.fotmob.com/players/1435859/manuel-tasso'
+    'https://www.fotmob.com/players/18717/jorge-carlos-carranza', 
+     'https://www.fotmob.com/players/1206589/williams-barlasina', 
+     'https://www.fotmob.com/players/1435200/cesar-atamanuk', 
+     'https://www.fotmob.com/players/1660567/nahuel-gonzalez', 
+     'https://www.fotmob.com/players/1712418/nahuel-carrizo',
 ]
 
 player_urls = [
-    'https://www.fotmob.com/players/824090/federico-vera', 'https://www.fotmob.com/players/1254921/mauro-zurita', 'https://www.fotmob.com/players/1439529/santiago-salle', 'https://www.fotmob.com/players/427046/nicolas-freire', 'https://www.fotmob.com/players/1086733/sebastian-valdez', 'https://www.fotmob.com/players/1137661/franco-paredes', 'https://www.fotmob.com/players/1206583/kevin-lomonaco', 'https://www.fotmob.com/players/1439528/fernando-da-rosa', 'https://www.fotmob.com/players/1661694/jonathan-de-irastorza', 'https://www.fotmob.com/players/1727054/gonzalo-bordon', 'https://www.fotmob.com/players/743009/adrian-sporle', 'https://www.fotmob.com/players/860780/assist-alvaro-angulo', 'https://www.fotmob.com/players/157868/ivan-marcone', 'https://www.fotmob.com/players/522083/pablo-galdames', 'https://www.fotmob.com/players/861785/rodrigo-fernandez', 'https://www.fotmob.com/players/1343374/felipe-loyola', 'https://www.fotmob.com/players/1354997/david-martinez', 'https://www.fotmob.com/players/1647589/lautaro-millan', 'https://www.fotmob.com/players/1749926/joel-medina', 'https://www.fotmob.com/players/161344/federico-mancuello', 'https://www.fotmob.com/players/527862/luciano-cabral', 'https://www.fotmob.com/players/1351096', 'https://www.fotmob.com/players/1362516/santiago-hidalgo', 'https://www.fotmob.com/players/1435714/santiago-gabriel-montiel', 'https://www.fotmob.com/players/1127325/braian-martinez', 'https://www.fotmob.com/players/1607054/diego-tarzia', 'https://www.fotmob.com/players/1709488/enzo-taborda', 'https://www.fotmob.com/players/1716022/kevin-medina', 'https://www.fotmob.com/players/425711/gabriel-avalos', 'https://www.fotmob.com/players/1025559/matias-gimenez-rojas', 'https://www.fotmob.com/players/1221231/maestro-puch-ignacio']
-
+     'https://www.fotmob.com/players/1343209/rodrigo-gonzalez', 'https://www.fotmob.com/players/1098253/giuliano-cerato', 'https://www.fotmob.com/players/1416306/ariel-gonzalez', 'https://www.fotmob.com/players/521211/yonathan-cabral', 'https://www.fotmob.com/players/561038/nestor-breitenbruch', 'https://www.fotmob.com/players/1245749/santiago-laquidain', 'https://www.fotmob.com/players/1292792/gonzalo-mottes', 'https://www.fotmob.com/players/1435860/tomas-kummer', 'https://www.fotmob.com/players/1748233/lautaro-luduena', 'https://www.fotmob.com/players/613957/fernando-roman', 'https://www.fotmob.com/players/1317346/ignacio-guerrico', 'https://www.fotmob.com/players/1373702/gabriel-paredes', 'https://www.fotmob.com/players/571621/roberto-agustin-bochi', 'https://www.fotmob.com/players/267200/matias-garcia', 'https://www.fotmob.com/players/1114918/joaquin-indacoechea', 'https://www.fotmob.com/players/1402051/marcelo-esponda', 'https://www.fotmob.com/players/1416305/lucio-falasco', 'https://www.fotmob.com/players/1607563/tobias-leiva', 'https://www.fotmob.com/players/1724392/juan-achetoni', 'https://www.fotmob.com/players/1738096/david-juarez', 'https://www.fotmob.com/players/1003370/justo-giani', 'https://www.fotmob.com/players/921347/lautaro-chavez', 'https://www.fotmob.com/players/1311635', 'https://www.fotmob.com/players/345801/ayrton-preciado', 'https://www.fotmob.com/players/1248634/natanael-guzman', 'https://www.fotmob.com/players/1340776/valentin-mancini', 'https://www.fotmob.com/players/1609504/tiago-serrago', 'https://www.fotmob.com/players/1660566/alexis-devesa', 'https://www.fotmob.com/players/1729340/lucas-lazarte', 'https://www.fotmob.com/players/793285/alexis-dominguez', 'https://www.fotmob.com/players/1363175', 'https://www.fotmob.com/players/1523556/franco-rami'
+]
 
 # Estadísticas
 goalkeeper_stats = ["Saves", "Save percentage", "Goals conceded", "Goals prevented", 
@@ -167,15 +171,17 @@ def setup_database():
         conn.close()
 
 def extract_player_stats(url, stats_needed, player_type):
-    """Extrae estadísticas de un jugador de forma robusta (por clase CSS)"""
+    """Extrae estadísticas de un jugador (método robusto jugatltu)"""
     options = Options()
     options.headless = True
     driver = webdriver.Chrome(options=options)
     driver.get(url)
 
     stats = {"url": url, "tipo": player_type, "nombre": None}
+    found_stats_count = 0
+    
     try:
-        # Scroll para cargar contenido dinámico
+        # Hacer scroll para cargar contenido dinámico
         for _ in range(5):
             driver.execute_script("window.scrollBy(0, 100);")
             time.sleep(0.5)
@@ -184,19 +190,23 @@ def extract_player_stats(url, stats_needed, player_type):
         try:
             player_name = driver.find_element(By.XPATH, "//div[contains(@class, 'css-')]/h1").text
             stats["nombre"] = player_name
-        except Exception:
+            print(f"👤 Jugador encontrado: {player_name}")
+        except:
             if '/' in url:
-                potential_name = url.split('/')[-1].replace('-', ' ').replace('_', ' ')
+                potential_name = url.split('/')[-1]
                 if potential_name and potential_name != "":
                     stats["nombre"] = potential_name
+                    print(f"👤 Nombre extraído de URL: {potential_name}")
+            else:
+                print("❌ No se pudo encontrar el nombre del jugador")
 
-        # Extraer estadísticas por clase CSS
+        # Extraer estadísticas buscando entre diferentes clases CSS (e1uibvo1 hasta e1uibvo50)
         for stat in stats_needed:
             found = False
             try:
-                # Método 1: Buscar div exacto con el texto
                 xpath_query = f"//div[contains(@class, 'e1uibvo') and text()='{stat}']"
                 stat_title_elements = driver.find_elements(By.XPATH, xpath_query)
+                
                 for element in stat_title_elements:
                     try:
                         value_element = element.find_element(By.XPATH, "./following-sibling::div")
@@ -206,10 +216,9 @@ def extract_player_stats(url, stats_needed, player_type):
                         found = True
                         print(f"  ✅ Estadística encontrada: '{stat}' = '{stat_value}' (método 1)")
                         break
-                    except Exception:
+                    except:
                         continue
-
-                # Método 2: Buscar por clase e1uibvoX
+                
                 if not found:
                     for i in range(1, 51):
                         try:
@@ -227,9 +236,9 @@ def extract_player_stats(url, stats_needed, player_type):
                                             found = True
                                             print(f"  ✅ Estadística encontrada: '{stat}' = '{stat_value}' (método 2, clase: {class_name})")
                                             break
-                                    except Exception:
+                                    except:
                                         pass
-                        except Exception:
+                        except:
                             continue
                         if found:
                             break
@@ -237,16 +246,18 @@ def extract_player_stats(url, stats_needed, player_type):
                     print(f"  ❌ No se encontró la estadística: '{stat}'")
             except Exception as stat_error:
                 print(f"  ❌ Error al buscar la estadística '{stat}': {stat_error}")
+                
     except Exception as e:
         print(f"Error al extraer estadísticas para {url}: {str(e)}")
     finally:
         driver.quit()
-
+    
     # Resumen de estadísticas encontradas
     total_stats = len(stats_needed)
-    stats_found = len([k for k in stats.keys() if k not in ("url", "tipo", "nombre")])
+    stats_found = len([k for k in stats.keys() if k != "url" and k != "tipo" and k != "nombre"])
     print(f"\n📊 Resumen para {stats['nombre'] or url}:")
     print(f"  - Estadísticas encontradas: {stats_found}/{total_stats} ({round(stats_found/total_stats*100, 1)}%)")
+    
     return stats
 
 def save_player_to_db(player_data, equipo_id):
@@ -255,6 +266,12 @@ def save_player_to_db(player_data, equipo_id):
     if not conn:
         return False
     
+    # Verificar si hay suficientes estadísticas para guardar
+    stats_count = len([k for k in player_data.keys() if k != "url" and k != "tipo" and k != "nombre"])
+    if stats_count == 0:
+        print(f"⚠️ No se guardará {player_data['nombre']} porque no se encontraron estadísticas")
+        return False
+        
     try:
         with conn.cursor() as cur:
             # Insertar jugador
@@ -342,6 +359,7 @@ def save_player_to_db(player_data, equipo_id):
             
             cur.execute(query, values)
             conn.commit()
+            print(f"✅ Jugador {player_data['nombre']} guardado con {len(values)-3} estadísticas")
             
         return True
     except Exception as e:
@@ -362,10 +380,10 @@ def main():
     
     try:
         with conn.cursor() as cur:
-            # Insertar Independiente si no existe
+            # Insertar Aldosivi si no existe
             cur.execute("""
             INSERT INTO equipos (nombre, nombre_corto, liga)
-            VALUES ('Independiente', 'Independiente', 'Liga Profesional')
+            VALUES ('Aldosivi', 'Aldosivi', 'Liga Profesional')
             ON CONFLICT (nombre) DO NOTHING
             RETURNING equipo_id;
             """)
@@ -374,26 +392,42 @@ def main():
             equipo_id = result[0] if result else None
             
             if not equipo_id:
-                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Independiente';")
+                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Aldosivi';")
                 equipo_id = cur.fetchone()[0]
             
             print(f"🔍 Equipo ID: {equipo_id}")
             
             # Procesar arqueros
             print("\n🧤 PROCESANDO ARQUEROS...")
+            arqueros_procesados = 0
+            arqueros_guardados = 0
+            
             for url in arquero_urls:
-                print(f"📥 Extrayendo stats de arquero: {url}")
+                print(f"\n📥 Extrayendo stats de arquero: {url}")
                 stats = extract_player_stats(url, goalkeeper_stats, "Arquero")
+                arqueros_procesados += 1
                 if stats["nombre"]:
-                    save_player_to_db(stats, equipo_id)
+                    if save_player_to_db(stats, equipo_id):
+                        arqueros_guardados += 1
             
             # Procesar jugadores de campo
             print("\n⚽ PROCESANDO JUGADORES DE CAMPO...")
+            jugadores_procesados = 0
+            jugadores_guardados = 0
+            
             for url in player_urls:
-                print(f"📥 Extrayendo stats de jugador: {url}")
+                print(f"\n📥 Extrayendo stats de jugador: {url}")
                 stats = extract_player_stats(url, outfield_stats, "Jugador")
+                jugadores_procesados += 1
                 if stats["nombre"]:
-                    save_player_to_db(stats, equipo_id)
+                    if save_player_to_db(stats, equipo_id):
+                        jugadores_guardados += 1
+            
+            # Mostrar resumen final
+            print("\n📋 RESUMEN FINAL:")
+            print(f"  - Arqueros procesados: {arqueros_procesados}, guardados: {arqueros_guardados}")
+            print(f"  - Jugadores procesados: {jugadores_procesados}, guardados: {jugadores_guardados}")
+            print(f"  - Total procesados: {arqueros_procesados + jugadores_procesados}, guardados: {arqueros_guardados + jugadores_guardados}")
                     
     except Exception as e:
         print(f"❌ Error en el proceso principal: {e}")

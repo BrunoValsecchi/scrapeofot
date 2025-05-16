@@ -1,0 +1,214 @@
+2025-05-15 18:05:52,295 - INFO - 🔄 Iniciando el script de extracción de estadísticas de Fotmob
+2025-05-15 18:05:52,306 - INFO - Conexión exitosa a PostgreSQL. Versión: PostgreSQL 16.8 (Ubuntu 16.8-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-05-15 18:05:52,306 - INFO - 🔄 Configurando base de datos...
+2025-05-15 18:05:52,318 - INFO - Tablas creadas o ya existentes
+2025-05-15 18:05:52,333 - INFO - 🔄 Verificando/creando equipo Atlético Tucumán
+2025-05-15 18:05:52,334 - INFO - 🔍 Equipo ID: 6
+2025-05-15 18:05:52,335 - INFO - 
+🧤 PROCESANDO ARQUEROS...
+2025-05-15 18:05:52,335 - INFO - 📥 Extrayendo stats de arquero: https://www.fotmob.com/es/players/874631/tomas-durso
+2025-05-15 18:05:53,058 - INFO - Navegando a https://www.fotmob.com/es/players/874631/tomas-durso
+2025-05-15 18:06:03,798 - INFO - Nombre extraído: Tomas Durso
+2025-05-15 18:06:03,815 - INFO - Título de la página: Tomas Durso - estadísticas, carrera y valor de mercado
+2025-05-15 18:06:04,459 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:06:04,572 - INFO - 📊 Estadísticas obtenidas para Tomas Durso
+2025-05-15 18:06:04,588 - INFO - Guardando jugador: Tomas Durso (Tipo: Arquero)
+2025-05-15 18:06:04,589 - INFO - Datos a insertar - equipo_id: 6, nombre: Tomas Durso, posición: Arquero
+2025-05-15 18:06:04,591 - INFO - ID del jugador: 73
+2025-05-15 18:06:04,591 - WARNING - No se encontraron estadísticas para el jugador Tomas Durso
+2025-05-15 18:06:04,591 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:06:04,593 - INFO - Jugador Tomas Durso guardado exitosamente
+2025-05-15 18:06:04,595 - INFO - 📥 Extrayendo stats de arquero: https://www.fotmob.com/es/players/1313882/j-gonzalez
+2025-05-15 18:06:05,534 - INFO - Navegando a https://www.fotmob.com/es/players/1313882/j-gonzalez
+2025-05-15 18:06:16,641 - INFO - Nombre extraído: Juan Gonzalez
+2025-05-15 18:06:16,645 - INFO - Título de la página: Juan Gonzalez - estadísticas, carrera y valor de mercado
+2025-05-15 18:06:17,241 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:06:17,318 - INFO - 📊 Estadísticas obtenidas para Juan Gonzalez
+2025-05-15 18:06:17,333 - INFO - Guardando jugador: Juan Gonzalez (Tipo: Arquero)
+2025-05-15 18:06:17,333 - INFO - Datos a insertar - equipo_id: 6, nombre: Juan Gonzalez, posición: Arquero
+2025-05-15 18:06:17,335 - INFO - ID del jugador: 74
+2025-05-15 18:06:17,335 - WARNING - No se encontraron estadísticas para el jugador Juan Gonzalez
+2025-05-15 18:06:17,335 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:06:17,336 - INFO - Jugador Juan Gonzalez guardado exitosamente
+2025-05-15 18:06:17,337 - INFO - 📥 Extrayendo stats de arquero: https://www.fotmob.com/es/players/1411102/patricio-albornoz
+2025-05-15 18:06:18,211 - INFO - Navegando a https://www.fotmob.com/es/players/1411102/patricio-albornoz
+2025-05-15 18:06:28,635 - INFO - Nombre extraído: Patricio Albornoz
+2025-05-15 18:06:28,640 - INFO - Título de la página: Patricio Albornoz - estadísticas, carrera y valor de mercado
+2025-05-15 18:06:29,124 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:06:29,227 - INFO - 📊 Estadísticas obtenidas para Patricio Albornoz
+2025-05-15 18:06:29,239 - INFO - Guardando jugador: Patricio Albornoz (Tipo: Arquero)
+2025-05-15 18:06:29,239 - INFO - Datos a insertar - equipo_id: 6, nombre: Patricio Albornoz, posición: Arquero
+2025-05-15 18:06:29,241 - INFO - ID del jugador: 75
+2025-05-15 18:06:29,241 - WARNING - No se encontraron estadísticas para el jugador Patricio Albornoz
+2025-05-15 18:06:29,241 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:06:29,242 - INFO - Jugador Patricio Albornoz guardado exitosamente
+2025-05-15 18:06:29,243 - INFO - 
+⚽ PROCESANDO JUGADORES DE CAMPO...
+2025-05-15 18:06:29,244 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/306504/damian-alberto-martinez
+2025-05-15 18:06:30,054 - INFO - Navegando a https://www.fotmob.com/es/players/306504/damian-alberto-martinez
+2025-05-15 18:06:41,729 - INFO - Nombre extraído: Damian Alberto Martinez
+2025-05-15 18:06:41,751 - INFO - Título de la página: Damian Alberto Martinez - estadísticas, carrera y valor de mercado
+2025-05-15 18:06:42,284 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:06:42,365 - INFO - 📊 Estadísticas obtenidas para Damian Alberto Martinez
+2025-05-15 18:06:42,378 - INFO - Guardando jugador: Damian Alberto Martinez (Tipo: Jugador)
+2025-05-15 18:06:42,378 - INFO - Datos a insertar - equipo_id: 6, nombre: Damian Alberto Martinez, posición: Jugador
+2025-05-15 18:06:42,380 - INFO - ID del jugador: 76
+2025-05-15 18:06:42,380 - WARNING - No se encontraron estadísticas para el jugador Damian Alberto Martinez
+2025-05-15 18:06:42,380 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:06:42,381 - INFO - Jugador Damian Alberto Martinez guardado exitosamente
+2025-05-15 18:06:42,383 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/1315385/moises-brandan
+2025-05-15 18:06:43,307 - INFO - Navegando a https://www.fotmob.com/es/players/1315385/moises-brandan
+2025-05-15 18:06:54,239 - INFO - Nombre extraído: Moises Brandan
+2025-05-15 18:06:54,243 - INFO - Título de la página: Moises Brandan - estadísticas, carrera y valor de mercado
+2025-05-15 18:06:54,530 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:06:54,616 - INFO - 📊 Estadísticas obtenidas para Moises Brandan
+2025-05-15 18:06:54,634 - INFO - Guardando jugador: Moises Brandan (Tipo: Jugador)
+2025-05-15 18:06:54,634 - INFO - Datos a insertar - equipo_id: 6, nombre: Moises Brandan, posición: Jugador
+2025-05-15 18:06:54,636 - INFO - ID del jugador: 77
+2025-05-15 18:06:54,636 - WARNING - No se encontraron estadísticas para el jugador Moises Brandan
+2025-05-15 18:06:54,636 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:06:54,638 - INFO - Jugador Moises Brandan guardado exitosamente
+2025-05-15 18:06:54,638 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/players/943414/matias-de-los-santos
+2025-05-15 18:06:55,490 - INFO - Navegando a https://www.fotmob.com/players/943414/matias-de-los-santos
+2025-05-15 18:07:05,976 - INFO - Nombre extraído: Matias De Los Santos
+2025-05-15 18:07:05,980 - INFO - Título de la página: Matias De Los Santos - stats, career and market value
+2025-05-15 18:07:06,271 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:07:06,346 - INFO - 📊 Estadísticas obtenidas para Matias De Los Santos
+2025-05-15 18:07:06,366 - INFO - Guardando jugador: Matias De Los Santos (Tipo: Jugador)
+2025-05-15 18:07:06,366 - INFO - Datos a insertar - equipo_id: 6, nombre: Matias De Los Santos, posición: Jugador
+2025-05-15 18:07:06,370 - INFO - ID del jugador: 78
+2025-05-15 18:07:06,371 - WARNING - No se encontraron estadísticas para el jugador Matias De Los Santos
+2025-05-15 18:07:06,371 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:07:06,373 - INFO - Jugador Matias De Los Santos guardado exitosamente
+2025-05-15 18:07:06,376 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/725579/marcelo-ortiz
+2025-05-15 18:07:07,261 - INFO - Navegando a https://www.fotmob.com/es/players/725579/marcelo-ortiz
+2025-05-15 18:07:18,186 - INFO - Nombre extraído: Marcelo Ortiz
+2025-05-15 18:07:18,190 - INFO - Título de la página: Marcelo Ortiz - estadísticas, carrera y valor de mercado
+2025-05-15 18:07:18,468 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:07:18,542 - INFO - 📊 Estadísticas obtenidas para Marcelo Ortiz
+2025-05-15 18:07:18,554 - INFO - Guardando jugador: Marcelo Ortiz (Tipo: Jugador)
+2025-05-15 18:07:18,554 - INFO - Datos a insertar - equipo_id: 6, nombre: Marcelo Ortiz, posición: Jugador
+2025-05-15 18:07:18,556 - INFO - ID del jugador: 79
+2025-05-15 18:07:18,556 - WARNING - No se encontraron estadísticas para el jugador Marcelo Ortiz
+2025-05-15 18:07:18,556 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:07:18,559 - INFO - Jugador Marcelo Ortiz guardado exitosamente
+2025-05-15 18:07:18,563 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/955274/gianluca-ferrari
+2025-05-15 18:07:19,322 - INFO - Navegando a https://www.fotmob.com/es/players/955274/gianluca-ferrari
+2025-05-15 18:07:30,382 - INFO - Nombre extraído: Gianluca Ferrari
+2025-05-15 18:07:30,386 - INFO - Título de la página: Gianluca Ferrari - estadísticas, carrera y valor de mercado
+2025-05-15 18:07:30,649 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:07:30,720 - INFO - 📊 Estadísticas obtenidas para Gianluca Ferrari
+2025-05-15 18:07:30,733 - INFO - Guardando jugador: Gianluca Ferrari (Tipo: Jugador)
+2025-05-15 18:07:30,733 - INFO - Datos a insertar - equipo_id: 6, nombre: Gianluca Ferrari, posición: Jugador
+2025-05-15 18:07:30,735 - INFO - ID del jugador: 80
+2025-05-15 18:07:30,735 - WARNING - No se encontraron estadísticas para el jugador Gianluca Ferrari
+2025-05-15 18:07:30,736 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:07:30,737 - INFO - Jugador Gianluca Ferrari guardado exitosamente
+2025-05-15 18:07:30,738 - INFO - ✅ Proceso completado
+2025-05-15 18:14:09,268 - INFO - 🔄 Iniciando el script de extracción de estadísticas de Fotmob
+2025-05-15 18:14:09,283 - INFO - Conexión exitosa a PostgreSQL. Versión: PostgreSQL 16.8 (Ubuntu 16.8-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-05-15 18:14:09,284 - INFO - 🔄 Configurando base de datos...
+2025-05-15 18:14:09,298 - INFO - Tablas creadas o ya existentes
+2025-05-15 18:14:09,315 - INFO - 🔄 Verificando/creando equipo Atlético Tucumán
+2025-05-15 18:14:09,318 - INFO - 🔍 Equipo ID: 6
+2025-05-15 18:14:09,329 - INFO - 
+🧤 PROCESANDO ARQUEROS...
+2025-05-15 18:14:09,329 - INFO - 📥 Extrayendo stats de arquero: https://www.fotmob.com/es/players/874631/tomas-durso
+2025-05-15 18:14:10,054 - INFO - Navegando a https://www.fotmob.com/es/players/874631/tomas-durso
+2025-05-15 18:14:25,032 - INFO - Nombre extraído: Tomas Durso
+2025-05-15 18:14:25,036 - INFO - Título de la página: Tomas Durso - estadísticas, carrera y valor de mercado
+2025-05-15 18:14:25,717 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:14:25,834 - INFO - 📊 Estadísticas obtenidas para Tomas Durso
+2025-05-15 18:14:25,851 - INFO - Guardando jugador: Tomas Durso (Tipo: Arquero)
+2025-05-15 18:14:25,851 - INFO - Datos a insertar - equipo_id: 6, nombre: Tomas Durso, posición: Arquero
+2025-05-15 18:14:25,853 - INFO - ID del jugador: 73
+2025-05-15 18:14:25,853 - WARNING - No se encontraron estadísticas para el jugador Tomas Durso
+2025-05-15 18:14:25,853 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:14:25,855 - INFO - Jugador Tomas Durso guardado exitosamente
+2025-05-15 18:14:25,855 - INFO - 📥 Extrayendo stats de arquero: https://www.fotmob.com/es/players/1313882/j-gonzalez
+2025-05-15 18:14:27,528 - INFO - Navegando a https://www.fotmob.com/es/players/1313882/j-gonzalez
+2025-05-15 18:14:41,024 - INFO - Nombre extraído: Juan Gonzalez
+2025-05-15 18:14:41,028 - INFO - Título de la página: Juan Gonzalez - estadísticas, carrera y valor de mercado
+2025-05-15 18:14:41,563 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:14:41,652 - INFO - 📊 Estadísticas obtenidas para Juan Gonzalez
+2025-05-15 18:14:41,669 - INFO - Guardando jugador: Juan Gonzalez (Tipo: Arquero)
+2025-05-15 18:14:41,669 - INFO - Datos a insertar - equipo_id: 6, nombre: Juan Gonzalez, posición: Arquero
+2025-05-15 18:14:41,672 - INFO - ID del jugador: 74
+2025-05-15 18:14:41,673 - WARNING - No se encontraron estadísticas para el jugador Juan Gonzalez
+2025-05-15 18:14:41,673 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:14:41,675 - INFO - Jugador Juan Gonzalez guardado exitosamente
+2025-05-15 18:14:41,679 - INFO - 📥 Extrayendo stats de arquero: https://www.fotmob.com/es/players/1411102/patricio-albornoz
+2025-05-15 18:14:42,545 - INFO - Navegando a https://www.fotmob.com/es/players/1411102/patricio-albornoz
+2025-05-15 18:14:55,205 - INFO - Nombre extraído: Patricio Albornoz
+2025-05-15 18:14:55,221 - INFO - Título de la página: Patricio Albornoz - estadísticas, carrera y valor de mercado
+2025-05-15 18:14:55,873 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:14:55,952 - INFO - 📊 Estadísticas obtenidas para Patricio Albornoz
+2025-05-15 18:14:55,966 - INFO - Guardando jugador: Patricio Albornoz (Tipo: Arquero)
+2025-05-15 18:14:55,966 - INFO - Datos a insertar - equipo_id: 6, nombre: Patricio Albornoz, posición: Arquero
+2025-05-15 18:14:55,968 - INFO - ID del jugador: 75
+2025-05-15 18:14:55,968 - WARNING - No se encontraron estadísticas para el jugador Patricio Albornoz
+2025-05-15 18:14:55,968 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:14:55,971 - INFO - Jugador Patricio Albornoz guardado exitosamente
+2025-05-15 18:14:55,975 - INFO - 
+⚽ PROCESANDO JUGADORES DE CAMPO...
+2025-05-15 18:14:55,975 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/306504/damian-alberto-martinez
+2025-05-15 18:14:56,849 - INFO - Navegando a https://www.fotmob.com/es/players/306504/damian-alberto-martinez
+2025-05-15 18:15:07,837 - INFO - Nombre extraído: Damian Alberto Martinez
+2025-05-15 18:15:07,844 - INFO - Título de la página: Damian Alberto Martinez - estadísticas, carrera y valor de mercado
+2025-05-15 18:15:08,149 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:15:08,225 - INFO - 📊 Estadísticas obtenidas para Damian Alberto Martinez
+2025-05-15 18:15:08,237 - INFO - Guardando jugador: Damian Alberto Martinez (Tipo: Jugador)
+2025-05-15 18:15:08,237 - INFO - Datos a insertar - equipo_id: 6, nombre: Damian Alberto Martinez, posición: Jugador
+2025-05-15 18:15:08,239 - INFO - ID del jugador: 76
+2025-05-15 18:15:08,239 - WARNING - No se encontraron estadísticas para el jugador Damian Alberto Martinez
+2025-05-15 18:15:08,239 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:15:08,240 - INFO - Jugador Damian Alberto Martinez guardado exitosamente
+2025-05-15 18:15:08,244 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/1315385/moises-brandan
+2025-05-15 18:15:08,981 - INFO - Navegando a https://www.fotmob.com/es/players/1315385/moises-brandan
+2025-05-15 18:15:20,100 - INFO - Nombre extraído: Moises Brandan
+2025-05-15 18:15:20,106 - INFO - Título de la página: Moises Brandan - estadísticas, carrera y valor de mercado
+2025-05-15 18:15:20,369 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:15:20,439 - INFO - 📊 Estadísticas obtenidas para Moises Brandan
+2025-05-15 18:15:20,454 - INFO - Guardando jugador: Moises Brandan (Tipo: Jugador)
+2025-05-15 18:15:20,454 - INFO - Datos a insertar - equipo_id: 6, nombre: Moises Brandan, posición: Jugador
+2025-05-15 18:15:20,456 - INFO - ID del jugador: 77
+2025-05-15 18:15:20,456 - WARNING - No se encontraron estadísticas para el jugador Moises Brandan
+2025-05-15 18:15:20,456 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:15:20,457 - INFO - Jugador Moises Brandan guardado exitosamente
+2025-05-15 18:15:20,457 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/players/943414/matias-de-los-santos
+2025-05-15 18:15:21,205 - INFO - Navegando a https://www.fotmob.com/players/943414/matias-de-los-santos
+2025-05-15 18:15:33,049 - INFO - Nombre extraído: Matias De Los Santos
+2025-05-15 18:15:33,055 - INFO - Título de la página: Matias De Los Santos - stats, career and market value
+2025-05-15 18:15:33,354 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:15:33,430 - INFO - 📊 Estadísticas obtenidas para Matias De Los Santos
+2025-05-15 18:15:33,444 - INFO - Guardando jugador: Matias De Los Santos (Tipo: Jugador)
+2025-05-15 18:15:33,444 - INFO - Datos a insertar - equipo_id: 6, nombre: Matias De Los Santos, posición: Jugador
+2025-05-15 18:15:33,446 - INFO - ID del jugador: 78
+2025-05-15 18:15:33,446 - WARNING - No se encontraron estadísticas para el jugador Matias De Los Santos
+2025-05-15 18:15:33,446 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:15:33,448 - INFO - Jugador Matias De Los Santos guardado exitosamente
+2025-05-15 18:15:33,451 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/725579/marcelo-ortiz
+2025-05-15 18:15:34,355 - INFO - Navegando a https://www.fotmob.com/es/players/725579/marcelo-ortiz
+2025-05-15 18:15:45,694 - INFO - Nombre extraído: Marcelo Ortiz
+2025-05-15 18:15:45,699 - INFO - Título de la página: Marcelo Ortiz - estadísticas, carrera y valor de mercado
+2025-05-15 18:15:46,018 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:15:46,100 - INFO - 📊 Estadísticas obtenidas para Marcelo Ortiz
+2025-05-15 18:15:46,114 - INFO - Guardando jugador: Marcelo Ortiz (Tipo: Jugador)
+2025-05-15 18:15:46,115 - INFO - Datos a insertar - equipo_id: 6, nombre: Marcelo Ortiz, posición: Jugador
+2025-05-15 18:15:46,118 - INFO - ID del jugador: 79
+2025-05-15 18:15:46,118 - WARNING - No se encontraron estadísticas para el jugador Marcelo Ortiz
+2025-05-15 18:15:46,119 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:15:46,122 - INFO - Jugador Marcelo Ortiz guardado exitosamente
+2025-05-15 18:15:46,122 - INFO - 📥 Extrayendo stats de jugador: https://www.fotmob.com/es/players/955274/gianluca-ferrari
+2025-05-15 18:15:47,376 - INFO - Navegando a https://www.fotmob.com/es/players/955274/gianluca-ferrari
+2025-05-15 18:16:00,540 - INFO - Nombre extraído: Gianluca Ferrari
+2025-05-15 18:16:00,546 - INFO - Título de la página: Gianluca Ferrari - estadísticas, carrera y valor de mercado
+2025-05-15 18:16:00,804 - INFO - Total de estadísticas extraídas: 0
+2025-05-15 18:16:00,887 - INFO - 📊 Estadísticas obtenidas para Gianluca Ferrari
+2025-05-15 18:16:00,904 - INFO - Guardando jugador: Gianluca Ferrari (Tipo: Jugador)
+2025-05-15 18:16:00,904 - INFO - Datos a insertar - equipo_id: 6, nombre: Gianluca Ferrari, posición: Jugador
+2025-05-15 18:16:00,907 - INFO - ID del jugador: 80
+2025-05-15 18:16:00,908 - WARNING - No se encontraron estadísticas para el jugador Gianluca Ferrari
+2025-05-15 18:16:00,908 - INFO - Ejecutando consulta para guardar estadísticas
+2025-05-15 18:16:00,910 - INFO - Jugador Gianluca Ferrari guardado exitosamente
+2025-05-15 18:16:00,914 - INFO - ✅ Proceso completado

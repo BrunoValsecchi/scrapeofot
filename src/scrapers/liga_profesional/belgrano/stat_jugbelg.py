@@ -21,20 +21,17 @@ DB_CONFIG = {
     'port': os.getenv('DB_PORT', '5432')
 }
 
-# Listas de URLs de jugadores de Independiente
+# Listas de URLs (ajustar con URLs específicas de Belgrano)
 arquero_urls = [
-    'https://www.fotmob.com/players/443465/rodrigo-rey', 'https://www.fotmob.com/players/1054156/joaquin-blazquez', 'https://www.fotmob.com/players/1435859/manuel-tasso'
-]
+'https://www.fotmob.com/players/369831/manuel-vicentini', 'https://www.fotmob.com/players/833271/ignacio-chicco', 'https://www.fotmob.com/players/875078/juan-espinola', 'https://www.fotmob.com/players/1630644/matias-daniele', 'https://www.fotmob.com/players/1666512/lucas-argayo']
 
-player_urls = [
-    'https://www.fotmob.com/players/824090/federico-vera', 'https://www.fotmob.com/players/1254921/mauro-zurita', 'https://www.fotmob.com/players/1439529/santiago-salle', 'https://www.fotmob.com/players/427046/nicolas-freire', 'https://www.fotmob.com/players/1086733/sebastian-valdez', 'https://www.fotmob.com/players/1137661/franco-paredes', 'https://www.fotmob.com/players/1206583/kevin-lomonaco', 'https://www.fotmob.com/players/1439528/fernando-da-rosa', 'https://www.fotmob.com/players/1661694/jonathan-de-irastorza', 'https://www.fotmob.com/players/1727054/gonzalo-bordon', 'https://www.fotmob.com/players/743009/adrian-sporle', 'https://www.fotmob.com/players/860780/assist-alvaro-angulo', 'https://www.fotmob.com/players/157868/ivan-marcone', 'https://www.fotmob.com/players/522083/pablo-galdames', 'https://www.fotmob.com/players/861785/rodrigo-fernandez', 'https://www.fotmob.com/players/1343374/felipe-loyola', 'https://www.fotmob.com/players/1354997/david-martinez', 'https://www.fotmob.com/players/1647589/lautaro-millan', 'https://www.fotmob.com/players/1749926/joel-medina', 'https://www.fotmob.com/players/161344/federico-mancuello', 'https://www.fotmob.com/players/527862/luciano-cabral', 'https://www.fotmob.com/players/1351096', 'https://www.fotmob.com/players/1362516/santiago-hidalgo', 'https://www.fotmob.com/players/1435714/santiago-gabriel-montiel', 'https://www.fotmob.com/players/1127325/braian-martinez', 'https://www.fotmob.com/players/1607054/diego-tarzia', 'https://www.fotmob.com/players/1709488/enzo-taborda', 'https://www.fotmob.com/players/1716022/kevin-medina', 'https://www.fotmob.com/players/425711/gabriel-avalos', 'https://www.fotmob.com/players/1025559/matias-gimenez-rojas', 'https://www.fotmob.com/players/1221231/maestro-puch-ignacio']
-
+player_urls = ['https://www.fotmob.com/players/1074868/elias-sebastian-lopez', 'https://www.fotmob.com/players/1523536/geronimo-heredia', 'https://www.fotmob.com/players/892840/anibal-leguizamon', 'https://www.fotmob.com/players/1042556/agustin-dattola', 'https://www.fotmob.com/players/1299928/nicolas-meriano', 'https://www.fotmob.com/players/1336581/agustin-baldi', 'https://www.fotmob.com/players/1520184/mariano-troilo', 'https://www.fotmob.com/players/1671451/juan-herrera', 'https://www.fotmob.com/players/1729959/alvaro-ocampo', 'https://www.fotmob.com/players/538346/fausto-grillo', 'https://www.fotmob.com/players/1242173/tobias-ostchega', 'https://www.fotmob.com/players/1644112/juan-velazquez', 'https://www.fotmob.com/players/1132245/santiago-longo', 'https://www.fotmob.com/players/146796/ariel-mauricio-rojas', 'https://www.fotmob.com/players/246408/lucas-menossi', 'https://www.fotmob.com/players/246409/facundo-tomas-quignon', 'https://www.fotmob.com/players/748843/francisco-gonzalez-metilli', 'https://www.fotmob.com/players/660835/matias-fernandez', 'https://www.fotmob.com/players/1516002/thiago-cravero', 'https://www.fotmob.com/players/1520185/nicolas-brito', 'https://www.fotmob.com/players/1206665/assist-tomas-castro', 'https://www.fotmob.com/players/754685/gabriel-compagnucci', 'https://www.fotmob.com/players/1219978/ulises-sanchez', 'https://www.fotmob.com/players/1509418/julian-mavilla', 'https://www.fotmob.com/en-GB/players/1645705/maximo-oses', 'https://www.fotmob.com/players/1652019/ramiro-hernandes', 'https://www.fotmob.com/players/322965/lucas-zelarayan', 'https://www.fotmob.com/players/1670372/gonzalo-zelarayan', 'https://www.fotmob.com/players/129326/franco-jara', 'https://www.fotmob.com/players/564614/lucas-passerini', 'https://www.fotmob.com/players/864365/nicolas-fernandez', 'https://www.fotmob.com/players/1104977/bryan-reyna', 'https://www.fotmob.com/players/1523550/jeremias-lucco']
 
 # Estadísticas
 goalkeeper_stats = ["Saves", "Save percentage", "Goals conceded", "Goals prevented", 
     "Clean sheets", "Error led to goal", "High claim", "Pass accuracy", 
-    "Accurate long balls", "Long ball accuracy", "Yellow cards", "Red cards"
-]
+        "Accurate long balls", "Long ball accuracy", "Yellow cards", "Red cards"
+    ]
 outfield_stats = [  "Goals", "Expected goals (xG)", "xG on target (xGOT)", "Non-penalty xG",
     "Shots", "Shots on target",
 
@@ -167,15 +164,16 @@ def setup_database():
         conn.close()
 
 def extract_player_stats(url, stats_needed, player_type):
-    """Extrae estadísticas de un jugador de forma robusta (por clase CSS)"""
+    """Extrae estadísticas de un jugador"""
     options = Options()
     options.headless = True
     driver = webdriver.Chrome(options=options)
     driver.get(url)
 
     stats = {"url": url, "tipo": player_type, "nombre": None}
+    
     try:
-        # Scroll para cargar contenido dinámico
+        # Hacer scroll para cargar contenido dinámico
         for _ in range(5):
             driver.execute_script("window.scrollBy(0, 100);")
             time.sleep(0.5)
@@ -184,69 +182,25 @@ def extract_player_stats(url, stats_needed, player_type):
         try:
             player_name = driver.find_element(By.XPATH, "//div[contains(@class, 'css-')]/h1").text
             stats["nombre"] = player_name
-        except Exception:
+        except:
             if '/' in url:
-                potential_name = url.split('/')[-1].replace('-', ' ').replace('_', ' ')
+                potential_name = url.split('/')[-1]
                 if potential_name and potential_name != "":
                     stats["nombre"] = potential_name
 
-        # Extraer estadísticas por clase CSS
+        # Extraer estadísticas
         for stat in stats_needed:
-            found = False
             try:
-                # Método 1: Buscar div exacto con el texto
-                xpath_query = f"//div[contains(@class, 'e1uibvo') and text()='{stat}']"
-                stat_title_elements = driver.find_elements(By.XPATH, xpath_query)
-                for element in stat_title_elements:
-                    try:
-                        value_element = element.find_element(By.XPATH, "./following-sibling::div")
-                        stat_value = value_element.text
-                        normalized_key = stat.lower().replace(" ", "_").replace("(", "").replace(")", "").replace("%", "percentage")
-                        stats[normalized_key] = stat_value
-                        found = True
-                        print(f"  ✅ Estadística encontrada: '{stat}' = '{stat_value}' (método 1)")
-                        break
-                    except Exception:
-                        continue
+                stat_element = driver.find_element(By.XPATH, f"//div[text()='{stat}']/following-sibling::div")
+                stats[stat.lower().replace(" ", "_").replace("(", "").replace(")", "").replace("%", "percentage")] = stat_element.text
+            except:
+                pass
 
-                # Método 2: Buscar por clase e1uibvoX
-                if not found:
-                    for i in range(1, 51):
-                        try:
-                            class_name = f"e1uibvo{i}"
-                            elements = driver.find_elements(By.CSS_SELECTOR, f"div[class*='{class_name}']")
-                            for element in elements:
-                                if element.text.strip() == stat:
-                                    try:
-                                        parent = element.find_element(By.XPATH, "./..")
-                                        value_element = parent.find_element(By.XPATH, "./div[last()]")
-                                        if value_element and value_element != element:
-                                            stat_value = value_element.text
-                                            normalized_key = stat.lower().replace(" ", "_").replace("(", "").replace(")", "").replace("%", "percentage")
-                                            stats[normalized_key] = stat_value
-                                            found = True
-                                            print(f"  ✅ Estadística encontrada: '{stat}' = '{stat_value}' (método 2, clase: {class_name})")
-                                            break
-                                    except Exception:
-                                        pass
-                        except Exception:
-                            continue
-                        if found:
-                            break
-                if not found:
-                    print(f"  ❌ No se encontró la estadística: '{stat}'")
-            except Exception as stat_error:
-                print(f"  ❌ Error al buscar la estadística '{stat}': {stat_error}")
     except Exception as e:
         print(f"Error al extraer estadísticas para {url}: {str(e)}")
     finally:
         driver.quit()
-
-    # Resumen de estadísticas encontradas
-    total_stats = len(stats_needed)
-    stats_found = len([k for k in stats.keys() if k not in ("url", "tipo", "nombre")])
-    print(f"\n📊 Resumen para {stats['nombre'] or url}:")
-    print(f"  - Estadísticas encontradas: {stats_found}/{total_stats} ({round(stats_found/total_stats*100, 1)}%)")
+    
     return stats
 
 def save_player_to_db(player_data, equipo_id):
@@ -362,10 +316,10 @@ def main():
     
     try:
         with conn.cursor() as cur:
-            # Insertar Independiente si no existe
+            # Insertar Belgrano si no existe
             cur.execute("""
             INSERT INTO equipos (nombre, nombre_corto, liga)
-            VALUES ('Independiente', 'Independiente', 'Liga Profesional')
+            VALUES ('Belgrano', 'Belgrano', 'Liga Profesional')
             ON CONFLICT (nombre) DO NOTHING
             RETURNING equipo_id;
             """)
@@ -374,7 +328,7 @@ def main():
             equipo_id = result[0] if result else None
             
             if not equipo_id:
-                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Independiente';")
+                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Belgrano';")
                 equipo_id = cur.fetchone()[0]
             
             print(f"🔍 Equipo ID: {equipo_id}")

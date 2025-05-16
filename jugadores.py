@@ -1,17 +1,30 @@
 from googlesearch import search
-import json
 
-# Lista de jugadores
-jugadores = [
-    "Diego Flores", "Luis Ingolotti", "Nelson Insfran", "Juan Pintado", "Fabricio Corbalan",
-    "Gaston Suso", "Leonardo Morales", "Enzo Martinez", "Renzo Giampaoli", "Juan Cortazzo",
-    "Juan Villalba", "Pedro Silva Torrejon", "Matias Melluso", "Pablo De Blasis",
-    "Facundo Di Biasi", "Lucas Nahuel Castro", "Junior Moreno", "Augusto Max",
-    "Martin Fernandez", "Nicolas Garayalde", "Leandro Mamut", "Alan Sosa",
-    "Santiago Villarreal", "Manuel Panaro", "Alejandro Piedrahita", "Bautista Merlini",
-    "Norberto Briasco", "Franco Torres", "Jorge de Asis", "Jan Hurtado", "Ivo Mammini",
-    "Rodrigo Castillo", "Jeremias Merlo", "Santino Primante"
+jugadores_nuevos = [
+    # Goalkeepers
+    "Tomas Marchiori", "Randall Rodriguez", "Lautaro Garzon",
+    
+    # Defenders
+    "Augustin Lagos", "Roberto Garcia", "Jano Gordon", "Thiago Silvero",
+    "Emanuel Mammana", "Damian Fernandez", "Patricio Pernicone", "Aaron Quiros",
+    "Valentin Gomez", "Mateo Acuna", "Elias Gomez", "Tomas Cavanagh",
+    
+    # Midfielders
+    "Claudio Baeza", "Agustin Bouzat", "Mateo Seoane", "Christian Ordonez",
+    "Leonel Roldan", "Kevin Vazquez", "Felipe Bussio", "Raul Cabral",
+    "Ignacio Gomez", "Isaias Andrada", "Maximiliano Porcel", "Imanol Machuca",
+    "Francisco Pizzini", "Maher Carrizo",
+    
+    # Wingers/Forwards
+    "Matias Pellegrini", "Tomas Galvan", "Thiago Fernandez", "Alvaro Montoro",
+    "Benjamin Bosch", "Francisco Montoro", "Manuel Fernandez", "Braian Romero",
+    "Michael Santos", "Florian Monzon"
 ]
+
+
+
+
+# Función para obtener enlaces de jugadores
 
 def obtener_enlaces_jugador(jugadores):
     enlaces = []
@@ -19,17 +32,17 @@ def obtener_enlaces_jugador(jugadores):
         query = f"site:fotmob.com {jugador}"
         print(f"🔍 Buscando: {query}")
         encontrado = False
-        for result in search(query, num_results=5):  # Buscar hasta 5 para más chances
+        for result in search(query, num_results=5):  # Busca hasta 5 resultados
             if "/players/" in result:
-                enlaces.append({"jugador": jugador, "enlace": result})
+                enlaces.append(result)  # Guarda SOLO el enlace
                 encontrado = True
                 break
         if not encontrado:
-            enlaces.append({"jugador": jugador, "enlace": "NO ENCONTRADO"})
+            enlaces.append("NO ENCONTRADO")  # Si no se encuentra, agrega este texto
     return enlaces
 
-# Obtener y mostrar resultados
-enlaces_jugadores = obtener_enlaces_jugador(jugadores)
+# Obtener los enlaces
+enlaces_jugadores = obtener_enlaces_jugador(jugadores_nuevos)
 
-# Mostrar en formato JSON
-print(json.dumps({"jugadores": enlaces_jugadores}, indent=4, ensure_ascii=False))
+# Mostrar como array (lista)
+print(enlaces_jugadores)

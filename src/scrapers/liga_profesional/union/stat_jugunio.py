@@ -21,16 +21,14 @@ DB_CONFIG = {
     'port': os.getenv('DB_PORT', '5432')
 }
 
-# Listas de URLs de jugadores de Independiente
+# Listas de URLs (las mismas que proporcionaste)
 arquero_urls = [
-    'https://www.fotmob.com/players/443465/rodrigo-rey', 'https://www.fotmob.com/players/1054156/joaquin-blazquez', 'https://www.fotmob.com/players/1435859/manuel-tasso'
+    'https://www.fotmob.com/players/643566/thiago-cardozo', 'https://www.fotmob.com/players/787283/matias-tagliamonte', 'https://www.fotmob.com/players/1607413/lucas-meuli', 'https://www.fotmob.com/players/1714153/mateo-raschia', 'https://www.fotmob.com/players/1716489/froilan-diaz'
 ]
 
-player_urls = [
-    'https://www.fotmob.com/players/824090/federico-vera', 'https://www.fotmob.com/players/1254921/mauro-zurita', 'https://www.fotmob.com/players/1439529/santiago-salle', 'https://www.fotmob.com/players/427046/nicolas-freire', 'https://www.fotmob.com/players/1086733/sebastian-valdez', 'https://www.fotmob.com/players/1137661/franco-paredes', 'https://www.fotmob.com/players/1206583/kevin-lomonaco', 'https://www.fotmob.com/players/1439528/fernando-da-rosa', 'https://www.fotmob.com/players/1661694/jonathan-de-irastorza', 'https://www.fotmob.com/players/1727054/gonzalo-bordon', 'https://www.fotmob.com/players/743009/adrian-sporle', 'https://www.fotmob.com/players/860780/assist-alvaro-angulo', 'https://www.fotmob.com/players/157868/ivan-marcone', 'https://www.fotmob.com/players/522083/pablo-galdames', 'https://www.fotmob.com/players/861785/rodrigo-fernandez', 'https://www.fotmob.com/players/1343374/felipe-loyola', 'https://www.fotmob.com/players/1354997/david-martinez', 'https://www.fotmob.com/players/1647589/lautaro-millan', 'https://www.fotmob.com/players/1749926/joel-medina', 'https://www.fotmob.com/players/161344/federico-mancuello', 'https://www.fotmob.com/players/527862/luciano-cabral', 'https://www.fotmob.com/players/1351096', 'https://www.fotmob.com/players/1362516/santiago-hidalgo', 'https://www.fotmob.com/players/1435714/santiago-gabriel-montiel', 'https://www.fotmob.com/players/1127325/braian-martinez', 'https://www.fotmob.com/players/1607054/diego-tarzia', 'https://www.fotmob.com/players/1709488/enzo-taborda', 'https://www.fotmob.com/players/1716022/kevin-medina', 'https://www.fotmob.com/players/425711/gabriel-avalos', 'https://www.fotmob.com/players/1025559/matias-gimenez-rojas', 'https://www.fotmob.com/players/1221231/maestro-puch-ignacio']
+player_urls = [ 'https://www.fotmob.com/players/209518/assist-claudio-corvalan', 'https://www.fotmob.com/players/845263/franco-pardo', 'https://www.fotmob.com/players/1293096/gaston-arturia', 'https://www.fotmob.com/players/1342537/nicolas-paz', 'https://www.fotmob.com/players/1388618/juan-pablo-luduena', 'https://www.fotmob.com/players/1606009/valentin-fascendini', 'https://www.fotmob.com/players/857248/franco-godoy', 'https://www.fotmob.com/players/1128483/francisco-gerometta', 'https://www.fotmob.com/players/1520065/lautaro-vargas', 'https://www.fotmob.com/players/673769/bruno-pitton', 'https://www.fotmob.com/players/1336846/mateo-del-blanco', 'https://www.fotmob.com/players/1131702/martin-ezequiel-canete', 'https://www.fotmob.com/players/290692/franco-fragapane', 'https://www.fotmob.com/players/529351/ezequiel-ham', 'https://www.fotmob.com/players/615788/mauricio-martinez', 'https://www.fotmob.com/players/647245/mauro-pitton', 'https://www.fotmob.com/players/1110614/julian-palacios', 'https://www.fotmob.com/players/1517524/rafael-profini', 'https://www.fotmob.com/players/1528894/lionel-verde', 'https://www.fotmob.com/players/1644439/francisco-pumpido', 'https://www.fotmob.com/players/1700565/emilio-giaccone', 'https://www.fotmob.com/players/1709865/mateo-locatelli', 'https://www.fotmob.com/players/950366/jose-angulo', 'https://www.fotmob.com/players/1693550/diego-diaz', 'https://www.fotmob.com/players/1757412/franco-ratotti', 'https://www.fotmob.com/players/1757413/tomas-lavezzi', 'https://www.fotmob.com/players/617244/lucas-emanuel-gamba', 'https://www.fotmob.com/players/809766/marcelo-estigarribia', 'https://www.fotmob.com/players/1220047', 'https://www.fotmob.com/players/1436222/jeronimo-domina', 'https://www.fotmob.com/players/1513120/mariano-meynier']
 
-
-# Estadísticas
+# Estadísticas (las mismas que proporcionaste)
 goalkeeper_stats = ["Saves", "Save percentage", "Goals conceded", "Goals prevented", 
     "Clean sheets", "Error led to goal", "High claim", "Pass accuracy", 
     "Accurate long balls", "Long ball accuracy", "Yellow cards", "Red cards"
@@ -362,10 +360,10 @@ def main():
     
     try:
         with conn.cursor() as cur:
-            # Insertar Independiente si no existe
+            # Insertar Unión si no existe
             cur.execute("""
             INSERT INTO equipos (nombre, nombre_corto, liga)
-            VALUES ('Independiente', 'Independiente', 'Liga Profesional')
+            VALUES ('Union', 'Union', 'Liga Profesional')
             ON CONFLICT (nombre) DO NOTHING
             RETURNING equipo_id;
             """)
@@ -374,7 +372,7 @@ def main():
             equipo_id = result[0] if result else None
             
             if not equipo_id:
-                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Independiente';")
+                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Unión';")
                 equipo_id = cur.fetchone()[0]
             
             print(f"🔍 Equipo ID: {equipo_id}")

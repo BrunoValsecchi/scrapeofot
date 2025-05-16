@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS estadisticas_jugador (
     estadistica_id SERIAL PRIMARY KEY,
     jugador_id INTEGER NOT NULL REFERENCES jugadores(jugador_id) ON DELETE CASCADE,
     url VARCHAR(255) NOT NULL,
-    tipo VARCHAR(20) NOT NULL CHECK (tipo IN ('Arquero', 'Jugador')),
+    tipo VARCHAR(20) NOT NULL CHECK (tipo IN ('Entrenador','Arquero', 'Jugador')),
 
     -- Arqueros
     saves VARCHAR(20),

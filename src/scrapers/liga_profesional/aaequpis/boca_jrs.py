@@ -53,7 +53,7 @@ def insertar_equipo(cursor):
             SET nombre_corto = EXCLUDED.nombre_corto,
                 liga = EXCLUDED.liga
             RETURNING equipo_id;
-        """, ('Vélez Sarsfield', 'Vélez Sarsfield', 'Liga Profesional'))
+        """, ('Boca Juniors', 'Boca', 'Liga Profesional'))
         return cursor.fetchone()[0]
     except errors.Error as e:
         logging.error(f"Error al insertar equipo: {e}")
@@ -88,10 +88,10 @@ def insertar_jugador(cursor, equipo_id, jugador):
         logging.error(f"Error al insertar jugador {jugador['nombre']}: {e}")
         raise
 
-def scrap_plantel_velez():
-    """Función principal para scrapear el plantel de velez"""
+def scrap_plantel_boca():
+    """Función principal para scrapear el plantel de boca"""
     start_time = time.time()
-    logging.info("Iniciando scraping de plantel de velez")
+    logging.info("Iniciando scraping de plantel de boca")
     
     # Configurar Selenium
     options = Options()
@@ -110,7 +110,7 @@ def scrap_plantel_velez():
             options=options
         )
         
-        driver.get("https://www.fotmob.com/teams/10079/squad/velez-sarsfield")
+        driver.get("https://www.fotmob.com/teams/10077/squad/boca-juniors")
         time.sleep(5)  # Esperar a que cargue la página
 
         # Conexión a la base de datos
@@ -164,4 +164,4 @@ def scrap_plantel_velez():
             driver.quit()
 
 if __name__ == "__main__":
-    scrap_plantel_velez()
+    scrap_plantel_boca()

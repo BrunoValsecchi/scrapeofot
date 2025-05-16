@@ -21,13 +21,13 @@ DB_CONFIG = {
     'port': os.getenv('DB_PORT', '5432')
 }
 
-# Listas de URLs de jugadores de Independiente
+# Listas de URLs para Instituto
 arquero_urls = [
-    'https://www.fotmob.com/players/443465/rodrigo-rey', 'https://www.fotmob.com/players/1054156/joaquin-blazquez', 'https://www.fotmob.com/players/1435859/manuel-tasso'
+   'https://www.fotmob.com/players/618661/joaquin-papaleo', 'https://www.fotmob.com/players/847982/manuel-roffo', 'https://www.fotmob.com/players/1432909/emanuel-sittaro'
 ]
 
 player_urls = [
-    'https://www.fotmob.com/players/824090/federico-vera', 'https://www.fotmob.com/players/1254921/mauro-zurita', 'https://www.fotmob.com/players/1439529/santiago-salle', 'https://www.fotmob.com/players/427046/nicolas-freire', 'https://www.fotmob.com/players/1086733/sebastian-valdez', 'https://www.fotmob.com/players/1137661/franco-paredes', 'https://www.fotmob.com/players/1206583/kevin-lomonaco', 'https://www.fotmob.com/players/1439528/fernando-da-rosa', 'https://www.fotmob.com/players/1661694/jonathan-de-irastorza', 'https://www.fotmob.com/players/1727054/gonzalo-bordon', 'https://www.fotmob.com/players/743009/adrian-sporle', 'https://www.fotmob.com/players/860780/assist-alvaro-angulo', 'https://www.fotmob.com/players/157868/ivan-marcone', 'https://www.fotmob.com/players/522083/pablo-galdames', 'https://www.fotmob.com/players/861785/rodrigo-fernandez', 'https://www.fotmob.com/players/1343374/felipe-loyola', 'https://www.fotmob.com/players/1354997/david-martinez', 'https://www.fotmob.com/players/1647589/lautaro-millan', 'https://www.fotmob.com/players/1749926/joel-medina', 'https://www.fotmob.com/players/161344/federico-mancuello', 'https://www.fotmob.com/players/527862/luciano-cabral', 'https://www.fotmob.com/players/1351096', 'https://www.fotmob.com/players/1362516/santiago-hidalgo', 'https://www.fotmob.com/players/1435714/santiago-gabriel-montiel', 'https://www.fotmob.com/players/1127325/braian-martinez', 'https://www.fotmob.com/players/1607054/diego-tarzia', 'https://www.fotmob.com/players/1709488/enzo-taborda', 'https://www.fotmob.com/players/1716022/kevin-medina', 'https://www.fotmob.com/players/425711/gabriel-avalos', 'https://www.fotmob.com/players/1025559/matias-gimenez-rojas', 'https://www.fotmob.com/players/1221231/maestro-puch-ignacio']
+    'https://www.fotmob.com/players/416311/juan-franco', 'https://www.fotmob.com/players/1039246/emanuel-beltran', 'https://www.fotmob.com/players/647928/fernando-alarcon', 'https://www.fotmob.com/players/690435/leonel-mosevich', 'https://www.fotmob.com/players/805539/nicolas-zalazar', 'https://www.fotmob.com/players/1453094/gonzalo-requena', 'https://www.fotmob.com/players/1616638/lautaro-carrera', 'https://www.fotmob.com/players/655806/lucas-rodriguez', 'https://www.fotmob.com/players/957219/elias-pereyra', 'https://www.fotmob.com/players/751057/francis-mac-allister', 'https://www.fotmob.com/players/917619/gaston-lodico', 'https://www.fotmob.com/players/1201767/stefano-moreyra', 'https://www.fotmob.com/players/1265160/franco-diaz', 'https://www.fotmob.com/players/882460/jonas-acevedo', 'https://www.fotmob.com/players/1437366/damian-puebla', 'https://www.fotmob.com/players/1314218/alex-luna', 'https://www.fotmob.com/players/724453/damian-batallini', 'https://www.fotmob.com/players/213106/silvio-romero', 'https://www.fotmob.com/players/1609545/jeremias-lazaro', 'https://www.fotmob.com/players/1653420/matias-gallardo', 'https://www.fotmob.com/players/1108679/francesco-lo-celso', 'https://www.fotmob.com/players/1676916/matias-klimowicz', 'https://www.fotmob.com/players/1748491/manuel-avellaneda', 'https://www.fotmob.com/players/971269', 'https://www.fotmob.com/players/1020747/nicolas-cordero', 'https://www.fotmob.com/players/1042007/matias-godoy', 'https://www.fotmob.com/players/1371235/jonathan-dellarossa', 'https://www.fotmob.com/players/1575649/luca-klimowicz']
 
 
 # Estadísticas
@@ -362,10 +362,10 @@ def main():
     
     try:
         with conn.cursor() as cur:
-            # Insertar Independiente si no existe
+            # Insertar Instituto si no existe
             cur.execute("""
             INSERT INTO equipos (nombre, nombre_corto, liga)
-            VALUES ('Independiente', 'Independiente', 'Liga Profesional')
+            VALUES ('Instituto', 'Instituto', 'Liga Profesional')
             ON CONFLICT (nombre) DO NOTHING
             RETURNING equipo_id;
             """)
@@ -374,7 +374,7 @@ def main():
             equipo_id = result[0] if result else None
             
             if not equipo_id:
-                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Independiente';")
+                cur.execute("SELECT equipo_id FROM equipos WHERE nombre = 'Instituto';")
                 equipo_id = cur.fetchone()[0]
             
             print(f"🔍 Equipo ID: {equipo_id}")
